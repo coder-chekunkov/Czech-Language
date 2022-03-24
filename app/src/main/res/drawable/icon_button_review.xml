@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="fill"
+        android:drawable="@drawable/background_settings_buttons"
+
+        />
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/background_icon_button_review"
+        android:top="20dp"
+        android:bottom="20dp"
+        android:left="20dp"
+        android:right="20dp"
+        />
+
+</layer-list>

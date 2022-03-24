@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/color_list_button_start"
+        />
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/icon_card_view_game"
+        android:top="9dp"
+        android:bottom="9dp"
+        android:left="9dp"
+        android:right="9dp"
+        />
+
+</layer-list>
