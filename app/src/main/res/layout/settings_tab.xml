@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:ads="http://schemas.android.com/tools"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center">
+
+    <ImageView
+            android:id="@+id/close_alert_dialog_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_button_close"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:layout_alignParentRight="true"
+            ads:ignore="ContentDescription,MissingPrefix,RtlHardcoded,UnusedAttribute,VectorDrawableCompat" />
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#9e83c4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    ads:ignore="UselessParent">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="25dp"
+                        android:text="Nastavení"
+                        ads:ignore="HardcodedText,RtlCompat,SpUsage"/>
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/icon_alert_dialog_settings"
+                        ads:ignore="ContentDescription,VectorDrawableCompat" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:text="Ты в настройках! Здесь ты сможешь обнулить результат правильно выполненых вопросов, связаться с нами или оставить отзыв. "
+                        ads:ignore="HardcodedText,RtlCompat,SpUsage"/>
+
+                <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#3e0489"
+                        ads:ignore="ObsoleteLayoutParam"/>
+
+                <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/linearLayout_two_button"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        ads:ignore="DisableBaselineAlignment,ObsoleteLayoutParam">
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="25dp"
+                            ads:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <ImageView
+                                android:id="@+id/button_settings_call"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/icon_button_send"
+                                android:elevation="5dp"
+                                ads:ignore="ContentDescription,NestedWeights,UnusedAttribute"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingRight="4dp"
+                            android:paddingLeft="4dp"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:id="@+id/button_settings_review"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/icon_button_review" ads:ignore="ContentDescription,InefficientWeight,NestedWeights"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingRight="25dp"
+                            ads:ignore="RtlHardcoded,RtlSymmetry">
+
+                        <ImageView
+                                android:id="@+id/button_settings_restart"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/icon_button_restart" ads:ignore="ContentDescription,NestedWeights"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#3e0489"
+                        ads:ignore="ObsoleteLayoutParam"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:text="Удачи!"
+                        ads:ignore="HardcodedText,RtlCompat,SpUsage"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

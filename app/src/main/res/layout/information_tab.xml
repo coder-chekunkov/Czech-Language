@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center">
+
+    <ImageView
+            android:id="@+id/close_alert_dialog_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_button_close"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:layout_alignParentRight="true"
+            tools:ignore="ContentDescription,MissingPrefix,RtlHardcoded,UnusedAttribute,VectorDrawableCompat"/>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#26d0a3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp" tools:ignore="UselessParent">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="25dp"
+                        android:text="Ahoj"
+                        tools:ignore="HardcodedText,RtlCompat,SpUsage"/>
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/icon_alert_dialog_information"
+                        tools:ignore="ContentDescription,VectorDrawableCompat"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:text="Учишь Чешский Язык? Мы поможем тебе добиться успехов! " tools:ignore="HardcodedText,RtlCompat,SpUsage"/>
+
+                <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#048966" tools:ignore="ObsoleteLayoutParam"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:text="Играй и выбирай, правильный ли перевод: зеленый - да, красный - нет."
+                        tools:ignore="HardcodedText,RtlCompat,SpUsage"/>
+
+                <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#048966" tools:ignore="ObsoleteLayoutParam"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:text="Каждый день у тебя есть 80 игр. Хочешь больше? Получи десять дополнительных игр в магазине."
+                        tools:ignore="HardcodedText,RtlCompat,SpUsage"/>
+
+                <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="#048966"
+                        tools:ignore="ObsoleteLayoutParam"/>
+
+                <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="27dp"
+                        android:paddingRight="32dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="RtlHardcoded">
+
+                    <TextView
+                            android:id="@+id/textView2"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/imageView2"
+                            android:text="До получения игр:"
+                            android:textSize="18dp"
+                            android:layout_marginLeft="10dp"
+                            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,UnknownIdInLayout"/>
+
+                    <TextView
+                            android:textDirection="locale"
+                            android:gravity="center"
+                            android:id="@+id/information_text_timer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textView2"
+                            android:text="24:00:00"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage,UnusedAttribute"/>
+
+                </RelativeLayout>
+
+                <View
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="#048966"
+                        tools:ignore="ObsoleteLayoutParam"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:text="Спасибо!"
+                        android:layout_gravity="center_horizontal" tools:ignore="HardcodedText,SpUsage"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

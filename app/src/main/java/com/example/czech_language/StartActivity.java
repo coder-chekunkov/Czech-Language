@@ -24,6 +24,8 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         if (v.getId() == R.id.imageView2) {
             Intent go_to_home = new Intent(StartActivity.this, MenuActivity.class);
             startActivity(go_to_home);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            finish();
         }
     }
 }
