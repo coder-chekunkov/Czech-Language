@@ -134,8 +134,54 @@
                 android:layout_below="@+id/layout_static"
                 android:background="#a1a1a1"/>
 
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/view_up"
+                android:layout_above="@+id/view_down">
 
+            <ScrollView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="ScrollViewSize">
+
+                    <ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+                                 android:id="@+id/vf"
+                                 android:layout_width="fill_parent"
+                                 android:layout_height="wrap_content" >
+
+                        <RelativeLayout
+                                android:id="@+id/relative_layout_game"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            <include layout="@layout/description_tab"
+                                     android:id="@+id/include_menu"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_alignParentRight="true"
+                                     android:layout_alignParentEnd="true" />
+                        </RelativeLayout>
+
+                        <include
+                                layout="@layout/game_tab"
+                                android:id="@+id/include_game"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                tools:ignore="ObsoleteLayoutParam"/>
+
+                    </ViewFlipper>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
 
         <View
                 android:id="@+id/view_down"

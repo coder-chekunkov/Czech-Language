@@ -11,7 +11,8 @@ import com.example.czech_language.tabs_worker.*;
 
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton buttonStatistic, buttonSettings, buttonShop, buttonInformation, buttonPlay;
+    ImageButton buttonStatistic, buttonSettings, buttonShop, buttonInformation, buttonPlay,
+            buttonCardViewDescription;
     ProgressBar pbAllSolutionProblems, pbTodaySolutionProblems;
     TextView twAllSolutionProblems, twTodaySolutionProblems;
 
@@ -21,6 +22,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     Settings settingsWorker;
     Statistic statisticWorker;
     GameOver gameOverWorker;
+
+    View firstLine, secondLine, thirdLine;
 
     int allProblems = 250, todayMaxProblems = 80;
 
@@ -61,8 +64,15 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         buttonPlay = findViewById(R.id.button_play_game);
         buttonPlay.setOnClickListener(this);
 
+        // Регистрация объектов на карточке "Описание":
+        firstLine = findViewById(R.id.card_view_view_one);
+        secondLine = findViewById(R.id.card_view_view_two);
+        thirdLine = findViewById(R.id.card_view_game_one);
+        buttonCardViewDescription = findViewById(R.id.image_button_card_view_start);
+
         // Запуск анимации всех кнопок:
-        StartAnimation startAnimation = new StartAnimation(buttonPlay, buttonShop, buttonInformation);
+        StartAnimation startAnimation = new StartAnimation(buttonPlay, buttonShop, buttonInformation,
+                buttonCardViewDescription, firstLine, secondLine, thirdLine);
         startAnimation.startAnimation();
 
         // Регистрастрация "Магазина":
