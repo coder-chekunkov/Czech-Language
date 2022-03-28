@@ -5,6 +5,10 @@ import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.example.czech_language.json_worker.statistic.ReadJSONStatistic;
+import org.json.JSONException;
+import java.io.IOException;
+
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,15 +21,28 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
 
         img = findViewById(R.id.imageView2);
         img.setOnClickListener(this);
+
+//        TimeWorker timeWorker = new TimeWorker();
+//        Thread time = new Thread(timeWorker);
+//        time.start();
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.imageView2) {
-            Intent go_to_home = new Intent(StartActivity.this, MenuActivity.class);
-            startActivity(go_to_home);
+            Intent goToHome = new Intent(StartActivity.this, MenuActivity.class);
+            startActivity(goToHome);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             finish();
+
+            try {
+                ReadJSONStatistic.readStatisticJSONFile(this);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
+
 }

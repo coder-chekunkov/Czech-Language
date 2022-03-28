@@ -6,11 +6,12 @@ import android.widget.ImageButton;
 
 public class StartAnimation {
 
-    ImageButton buttonPlay, buttonShop, buttonInformation, buttonCardViewDescription;
+    ImageButton buttonPlay, buttonShop, buttonInformation, buttonCardViewDescription, buttonCardViewGame;
     View firstLine, secondLine, thirdLine;
 
     public StartAnimation(ImageButton buttonPlay, ImageButton buttonShop, ImageButton buttonInformation,
-                          ImageButton buttonCardViewDescription, View firstLine, View secondLine, View thirdLine) {
+                          ImageButton buttonCardViewDescription, ImageButton buttonCardViewGame,
+                          View firstLine, View secondLine, View thirdLine) {
         this.buttonPlay = buttonPlay;
         this.buttonShop = buttonShop;
         this.buttonInformation = buttonInformation;
@@ -18,6 +19,7 @@ public class StartAnimation {
         this.firstLine = firstLine;
         this.secondLine = secondLine;
         this.thirdLine = thirdLine;
+        this.buttonCardViewGame = buttonCardViewGame;
     }
 
     public void startAnimation() {
@@ -45,6 +47,12 @@ public class StartAnimation {
         animationDrawableButtonCardViewDescription.setExitFadeDuration(500);
         animationDrawableButtonCardViewDescription.start();
 
+        // Запуск анимации "Картинки":
+        AnimationDrawable animationDrawableButtonCardViewGame = (AnimationDrawable) buttonCardViewGame.getBackground();
+        animationDrawableButtonCardViewGame.setEnterFadeDuration(100);
+        animationDrawableButtonCardViewGame.setExitFadeDuration(500);
+        animationDrawableButtonCardViewGame.start();
+
         // Запуск анимации "Первой линии":
         AnimationDrawable animationDrawableFirstLine = (AnimationDrawable) firstLine.getBackground();
         animationDrawableFirstLine.setEnterFadeDuration(100);
@@ -62,7 +70,5 @@ public class StartAnimation {
         animationDrawableThirdLine.setEnterFadeDuration(100);
         animationDrawableThirdLine.setExitFadeDuration(500);
         animationDrawableThirdLine.start();
-
     }
-
 }

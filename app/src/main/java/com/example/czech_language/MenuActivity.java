@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.czech_language.static_worker.CardChanger;
 import com.example.czech_language.static_worker.StartAnimation;
 import com.example.czech_language.tabs_worker.*;
 
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton buttonStatistic, buttonSettings, buttonShop, buttonInformation, buttonPlay,
-            buttonCardViewDescription;
+            buttonCardViewDescription, buttonCardViewGame;
     ProgressBar pbAllSolutionProblems, pbTodaySolutionProblems;
     TextView twAllSolutionProblems, twTodaySolutionProblems;
 
@@ -24,6 +25,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     GameOver gameOverWorker;
 
     View firstLine, secondLine, thirdLine;
+
+    RelativeLayout layoutDescription;
+    ViewFlipper vf;
+    CardChanger cardChanger;
+    boolean isGame = false;
 
     int allProblems = 250, todayMaxProblems = 80;
 
@@ -69,10 +75,17 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         secondLine = findViewById(R.id.card_view_view_two);
         thirdLine = findViewById(R.id.card_view_game_one);
         buttonCardViewDescription = findViewById(R.id.image_button_card_view_start);
+        buttonCardViewGame = findViewById(R.id.image_view_card_view_game_play);
+
+        // Регистрация "смены карточкек":
+        vf = findViewById(R.id.vf);
+        cardChanger = new CardChanger(vf, buttonPlay);
+        layoutDescription = findViewById(R.id.relative_layout_game);
+        layoutDescription.setOnClickListener(this);
 
         // Запуск анимации всех кнопок:
         StartAnimation startAnimation = new StartAnimation(buttonPlay, buttonShop, buttonInformation,
-                buttonCardViewDescription, firstLine, secondLine, thirdLine);
+                buttonCardViewDescription,  buttonCardViewGame, firstLine, secondLine, thirdLine);
         startAnimation.startAnimation();
 
         // Регистрастрация "Магазина":
@@ -85,11 +98,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
         // Регистрастрация "Настройки":
         alertDialogSettings = new Dialog(this);
-        settingsWorker = new Settings(alertDialogSettings);
+        settingsWorker = new Settings(this, alertDialogSettings);
 
         // Регистрастрация "Статистика":
         alertDialogStatistic = new Dialog(this);
-        statisticWorker = new Statistic(alertDialogStatistic);
+        statisticWorker = new Statistic(this, alertDialogStatistic);
 
         // Регистрастрация "Конец игры":
         alertDialogGameOver = new Dialog(this);
@@ -100,7 +113,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            // Нажатие на кнопку "Сеть":
+            // Нажатие на кнопку "Статистика":
             case R.id.button_network:
                 statisticWorker.showStatistic();
                 break;
@@ -118,8 +131,22 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             // Нажатие на кнопку "Играть":
             case R.id.button_play_game:
-                gameOverWorker.showGameOver();
+            case R.id.relative_layout_game:
+                startChanger();
                 break;
         }
+    }
+
+    // Метод для смены карточек игры:
+    public void startChanger(){
+        int buffGame;
+        if (!isGame) {
+            buffGame = 1;
+            isGame = true;
+        } else {
+            buffGame = 2;
+            isGame = false;
+        }
+        cardChanger.changeCard(buffGame);
     }
 }
