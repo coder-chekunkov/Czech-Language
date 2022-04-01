@@ -5,10 +5,6 @@ import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.czech_language.json_worker.statistic.ReadJSONStatistic;
-import org.json.JSONException;
-import java.io.IOException;
-
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,14 +30,6 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
             startActivity(goToHome);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             finish();
-
-            try {
-                ReadJSONStatistic.readStatisticJSONFile(this);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
         }
     }
 

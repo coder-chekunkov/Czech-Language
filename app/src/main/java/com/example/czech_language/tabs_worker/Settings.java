@@ -9,8 +9,10 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 import com.example.czech_language.MenuActivity;
 import com.example.czech_language.R;
+import com.example.czech_language.statistic_worker.StatisticCreator;
 
 public class Settings extends MenuActivity implements View.OnClickListener {
 
@@ -60,7 +62,7 @@ public class Settings extends MenuActivity implements View.OnClickListener {
                 leaveReview();
                 break;
             case R.id.button_settings_restart:
-                System.out.println("Pushed Button-Restart");
+                restartGame();
                 break;
         }
     }
@@ -73,11 +75,22 @@ public class Settings extends MenuActivity implements View.OnClickListener {
     }
 
     // Метод отправки сообщения разрботчикам:
-    public void sendMessageToDevelop(){
+    public void sendMessageToDevelop() {
         Intent intent_call_us = new Intent(Intent.ACTION_SEND);
         intent_call_us.putExtra(Intent.EXTRA_EMAIL, "czech.language@yandex.ru");
         intent_call_us.putExtra(Intent.EXTRA_TEXT, "Здравствуйте, команада разработчиков приложения \"Чешский Язык\",");
         intent_call_us.setType("message/rfc822");
         context.startActivity(Intent.createChooser(intent_call_us, "Выберите Приложение:"));
+    }
+
+    // Метод сброса статистики пользователя:
+    public void restartGame() {
+        StatisticCreator statisticCreator = new StatisticCreator();
+        statisticCreator.restartStatistic(context);
+
+        Toast toastRestartGame = Toast.makeText(context.getApplicationContext(), "Статистика сброшена!", Toast.LENGTH_SHORT);
+        toastRestartGame.show();
+
+        alertDialogSettings.dismiss();
     }
 }

@@ -9,11 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.czech_language.MenuActivity;
 import com.example.czech_language.R;
-import com.example.czech_language.json_worker.statistic.ReadJSONStatistic;
-import com.example.czech_language.json_worker.statistic.StatisticFromJSON;
-import org.json.JSONException;
+import com.example.czech_language.statistic_worker.GameStatistic;
+import com.example.czech_language.statistic_worker.StatisticCreator;
 
-import java.io.IOException;
 
 public class Statistic extends MenuActivity implements View.OnClickListener {
 
@@ -44,34 +42,30 @@ public class Statistic extends MenuActivity implements View.OnClickListener {
         alertDialogStatistic.show();
 
         // Вывод статистических данных:
-        try {
-            // Получение данных:
-            StatisticFromJSON statistic = ReadJSONStatistic.readStatisticJSONFile(context);
-            String goodAnswers, badAnswers, allGames, lastGames;
+        // Получение данных:
+        StatisticCreator statisticCreator = new StatisticCreator();
+        GameStatistic statistic = statisticCreator.getStatistic(context);
+        String goodAnswers, badAnswers, allGames, lastGames;
 
-            // Проверка данных:
-            if (statistic.getGoodAnswers() > 999) goodAnswers = "999+";
-            else goodAnswers = String.valueOf(statistic.getGoodAnswers());
 
-            if (statistic.getBadAnswers() > 999) badAnswers = "999+";
-            else badAnswers = String.valueOf(statistic.getBadAnswers());
+        // Проверка данных:
+        if (statistic.getGoodAnswers() > 999) goodAnswers = "999+";
+        else goodAnswers = String.valueOf(statistic.getGoodAnswers());
 
-            if (statistic.getAllGames() > 999) allGames = "999+";
-            else allGames = String.valueOf(statistic.getAllGames());
+        if (statistic.getBadAnswers() > 999) badAnswers = "999+";
+        else badAnswers = String.valueOf(statistic.getBadAnswers());
 
-            if (statistic.getLastGames() > 999) lastGames = "999+";
-            else lastGames = String.valueOf(statistic.getLastGames());
+        if (statistic.getAllGames() > 999) allGames = "999+";
+        else allGames = String.valueOf(statistic.getAllGames());
 
-            // Вывод данных:
-            countGoodAnswers.setText(goodAnswers);
-            countBadAnswers.setText(badAnswers);
-            countAllGames.setText(allGames);
-            countLastGames.setText(lastGames);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        if (statistic.getLastGames() > 999) lastGames = "999+";
+        else lastGames = String.valueOf(statistic.getLastGames());
+
+        // Вывод данных:
+        countGoodAnswers.setText(goodAnswers);
+        countBadAnswers.setText(badAnswers);
+        countAllGames.setText(allGames);
+        countLastGames.setText(lastGames);
     }
 
     @Override

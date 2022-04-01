@@ -85,12 +85,12 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
         // Запуск анимации всех кнопок:
         StartAnimation startAnimation = new StartAnimation(buttonPlay, buttonShop, buttonInformation,
-                buttonCardViewDescription,  buttonCardViewGame, firstLine, secondLine, thirdLine);
+                buttonCardViewDescription, buttonCardViewGame, firstLine, secondLine, thirdLine);
         startAnimation.startAnimation();
 
         // Регистрастрация "Магазина":
         alertDialogShop = new Dialog(this);
-        shopWorker = new Shop(alertDialogShop);
+        shopWorker = new Shop(this, alertDialogShop);
 
         // Регистрастрация "Информации":
         alertDialogInformation = new Dialog(this);
@@ -138,7 +138,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     // Метод для смены карточек игры:
-    public void startChanger(){
+    public void startChanger() {
         int buffGame;
         if (!isGame) {
             buffGame = 1;

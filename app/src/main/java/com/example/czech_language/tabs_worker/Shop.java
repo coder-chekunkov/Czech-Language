@@ -2,18 +2,23 @@ package com.example.czech_language.tabs_worker;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 import com.example.czech_language.R;
 
 public class Shop implements View.OnClickListener {
 
     Dialog alertDialogShop;
     ImageView buttonCloseShop, buttonGetReward;
+    Context context;
 
-    public Shop(Dialog alertDialogShop) {
+    public Shop(Context context, Dialog alertDialogShop) {
         this.alertDialogShop = alertDialogShop;
         alertDialogShop.setContentView(R.layout.shop_tab);
 
@@ -24,6 +29,8 @@ public class Shop implements View.OnClickListener {
         // Регистрация кнопки "Награждение":
         buttonGetReward = alertDialogShop.findViewById(R.id.button_shop_reward);
         buttonGetReward.setOnClickListener(this);
+
+        this.context = context;
     }
 
     // Метод вывода окна с "Магазином":
@@ -40,8 +47,31 @@ public class Shop implements View.OnClickListener {
                 alertDialogShop.dismiss();
                 break;
             case R.id.button_shop_reward:
-                System.out.println("Pushed Button-Get-Rewards");
+                getReward();
                 break;
         }
+    }
+
+    // Запрос рекламы для получения дополнительных игр:
+    public void getReward() {
+        if (isConnectedInternet()) System.out.println("get reward");
+        else {
+            Toast toastNoInternet = Toast.makeText(context.getApplicationContext(), "Проверьте подключение к интернету!", Toast.LENGTH_SHORT);
+            toastNoInternet.show();
+        }
+    }
+
+    // Проверка наличия интернет-соединения на устройстве:
+    public boolean isConnectedInternet() {
+        ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity == null) return false;
+
+        NetworkInfo[] info = connectivity.getAllNetworkInfo();
+        if (info != null)
+            for (NetworkInfo networkInfo : info) {
+                if (networkInfo.getState() == NetworkInfo.State.CONNECTED) return true;
+            }
+
+        return false;
     }
 }

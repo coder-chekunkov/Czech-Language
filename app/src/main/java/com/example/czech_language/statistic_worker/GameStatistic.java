@@ -1,6 +1,6 @@
-package com.example.czech_language.json_worker.statistic;
+package com.example.czech_language.statistic_worker;
 
-public class StatisticFromJSON {
+public class GameStatistic {
 
     // Все статистические данные:
     int goodAnswers, badAnswers, allGames, lastGames;
