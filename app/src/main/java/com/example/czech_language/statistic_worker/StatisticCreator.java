@@ -14,9 +14,9 @@ public class StatisticCreator extends MenuActivity {
         SharedPreferences mStatistic = context.getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE);
 
         GameStatistic statistic = new GameStatistic();
-        statistic.setGoodAnswers(mStatistic.getInt("good_answers", 1));
-        statistic.setBadAnswers(mStatistic.getInt("bas_answers", 1));
-        statistic.setAllGames(mStatistic.getInt("all_games", 1));
+        statistic.setGoodAnswers(mStatistic.getInt("good_answers", 0));
+        statistic.setBadAnswers(mStatistic.getInt("bas_answers", 0));
+        statistic.setAllGames(mStatistic.getInt("all_games", 0));
         statistic.setLastGames(mStatistic.getInt("last_games", 80));
 
         return statistic;
@@ -31,5 +31,4 @@ public class StatisticCreator extends MenuActivity {
         editor.putInt("all_games", 0);
         editor.apply();
     }
-
 }

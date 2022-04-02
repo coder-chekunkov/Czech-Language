@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.czech_language.game_worker.GameCreator;
 import com.example.czech_language.static_worker.CardChanger;
 import com.example.czech_language.static_worker.StartAnimation;
 import com.example.czech_language.tabs_worker.*;
@@ -13,9 +14,10 @@ import com.example.czech_language.tabs_worker.*;
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton buttonStatistic, buttonSettings, buttonShop, buttonInformation, buttonPlay,
-            buttonCardViewDescription, buttonCardViewGame;
+            buttonCardViewDescription, buttonCardViewGame, buttonAnswerYes, buttonAnswerNo,
+            firstSmile, secondSmile;
     ProgressBar pbAllSolutionProblems, pbTodaySolutionProblems;
-    TextView twAllSolutionProblems, twTodaySolutionProblems;
+    TextView twAllSolutionProblems, twTodaySolutionProblems, czWord, ruWord;
 
     Dialog alertDialogShop, alertDialogInformation, alertDialogSettings, alertDialogStatistic, alertDialogGameOver;
     Shop shopWorker;
@@ -23,6 +25,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     Settings settingsWorker;
     Statistic statisticWorker;
     GameOver gameOverWorker;
+    GameCreator gameCreator;
 
     View firstLine, secondLine, thirdLine;
 
@@ -37,6 +40,20 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        // Регистрация надписей со словами игры:
+        czWord = findViewById(R.id.text_game_one);
+        ruWord = findViewById(R.id.text_game_two);
+
+        // Регистрация кнопок "Да" и "Нет" для игры:
+        buttonAnswerYes = findViewById(R.id.button_answer_yes);
+        buttonAnswerNo = findViewById(R.id.button_answer_no);
+
+        // Регистрация изображений с результатом ответа:
+        firstSmile = findViewById(R.id.smile_one);
+        firstSmile.setVisibility(View.INVISIBLE);
+        secondSmile = findViewById(R.id.smile_two);
+        secondSmile.setVisibility(View.INVISIBLE);
 
         // Регистрация прогресс-баров:
         pbAllSolutionProblems = findViewById(R.id.progressBar_decided_questions);
@@ -88,6 +105,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 buttonCardViewDescription, buttonCardViewGame, firstLine, secondLine, thirdLine);
         startAnimation.startAnimation();
 
+        gameCreator = new GameCreator(this, czWord, ruWord, buttonAnswerYes, buttonAnswerNo,
+                firstSmile, secondSmile);
+
         // Регистрастрация "Магазина":
         alertDialogShop = new Dialog(this);
         shopWorker = new Shop(this, alertDialogShop);
@@ -133,6 +153,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_play_game:
             case R.id.relative_layout_game:
                 startChanger();
+                gameCreator.createWordGame();
                 break;
         }
     }

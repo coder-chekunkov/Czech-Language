@@ -1,0 +1,28 @@
+{
+  "1": {
+    "cz_word": "Ahoj",
+    "ru_word": "Привет",
+    "ru_word_wrong": "Пока"
+  },
+  "2": {
+    "cz_word": "Název",
+    "ru_word": "Имя",
+    "ru_word_wrong": "Фамилия"
+  },
+  "3": {
+    "cz_word": "Příjmení",
+    "ru_word": "Фамилия",
+    "ru_word_wrong": "Имя"
+  },
+  "4": {
+    "cz_word": "Prosim",
+    "ru_word": "Пожалуйста",
+    "ru_word_wrong": "Извините"
+  },
+  "5": {
+    "cz_word": "Promiňte",
+    "ru_word": "Извините",
+    "ru_word_wrong": "Пожалуйста"
+  }
+
+}
