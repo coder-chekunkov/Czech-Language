@@ -6,8 +6,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.czech_language.R;
+import com.example.czech_language.static_worker.ProgressBarWorker;
 import com.example.czech_language.static_worker.StartAnimation;
+import com.example.czech_language.statistic_worker.StatisticCreator;
 import org.json.JSONException;
+
 import java.io.IOException;
 
 public class GameCreator implements View.OnClickListener {
@@ -17,11 +20,13 @@ public class GameCreator implements View.OnClickListener {
     Context context;
 
     DictionaryWord word;
+    public ProgressBarWorker progressBarWorker;
     boolean isWrongWord;
 
     public GameCreator(Context context, TextView czWord, TextView ruWord,
                        ImageButton buttonAnswerYes, ImageButton buttonAnswerNo,
-                       ImageButton firstSmile, ImageButton secondSmile) {
+                       ImageButton firstSmile, ImageButton secondSmile,
+                       ProgressBarWorker progressBarWorker) {
         this.context = context;
         this.czWord = czWord;
         this.ruWord = ruWord;
@@ -29,8 +34,9 @@ public class GameCreator implements View.OnClickListener {
         this.buttonAnswerNo = buttonAnswerNo;
         this.firstSmile = firstSmile;
         this.secondSmile = secondSmile;
-        buttonAnswerYes.setOnClickListener(this);
-        buttonAnswerNo.setOnClickListener(this);
+        this.buttonAnswerYes.setOnClickListener(this);
+        this.buttonAnswerNo.setOnClickListener(this);
+        this.progressBarWorker = progressBarWorker;
     }
 
     @Override
@@ -42,7 +48,7 @@ public class GameCreator implements View.OnClickListener {
     // Метод вывода слов на экран:
     public void createWordGame() {
 
-        int numberWord = (int) (Math.random() * (5)) + 1;
+        int numberWord = (int) (Math.random() * 50) + 1;
         int buff = (int) (Math.random() * (10)) + 1;
         isWrongWord = buff % 2 == 0;
 
@@ -74,10 +80,12 @@ public class GameCreator implements View.OnClickListener {
             Toast toastRight = Toast.makeText(context.getApplicationContext(), "Верно! " + rightAnswer, Toast.LENGTH_SHORT);
             toastRight.show();
             StartAnimation.animationImgResult(context, true, firstSmile, secondSmile);
+            StatisticCreator.increaseStatistic(context, 1, 0);
         } else {
             Toast toastMistake = Toast.makeText(context.getApplicationContext(), "Ошибка! " + rightAnswer, Toast.LENGTH_SHORT);
             toastMistake.show();
             StartAnimation.animationImgResult(context, false, firstSmile, secondSmile);
+            StatisticCreator.increaseStatistic(context, 0, 1);
         }
 
         createWordGame();

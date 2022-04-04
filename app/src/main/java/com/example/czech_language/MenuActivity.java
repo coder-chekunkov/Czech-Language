@@ -8,6 +8,7 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.czech_language.game_worker.GameCreator;
 import com.example.czech_language.static_worker.CardChanger;
+import com.example.czech_language.static_worker.ProgressBarWorker;
 import com.example.czech_language.static_worker.StartAnimation;
 import com.example.czech_language.tabs_worker.*;
 
@@ -26,6 +27,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     Statistic statisticWorker;
     GameOver gameOverWorker;
     GameCreator gameCreator;
+    ProgressBarWorker progressBarWorker;
 
     View firstLine, secondLine, thirdLine;
 
@@ -34,9 +36,6 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     CardChanger cardChanger;
     boolean isGame = false;
 
-    int allProblems = 250, todayMaxProblems = 80;
-
-    @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
@@ -57,15 +56,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
         // Регистрация прогресс-баров:
         pbAllSolutionProblems = findViewById(R.id.progressBar_decided_questions);
-        pbAllSolutionProblems.setMax(allProblems);
         pbTodaySolutionProblems = findViewById(R.id.progressBar_last_questions);
-        pbAllSolutionProblems.setMax(todayMaxProblems);
 
         // Регистрация надписей с решенными вопросами:
         twAllSolutionProblems = findViewById(R.id.text_decided_questions);
-        twAllSolutionProblems.setText("0/" + allProblems);
         twTodaySolutionProblems = findViewById(R.id.text_last_questions);
-        twTodaySolutionProblems.setText("0/" + todayMaxProblems);
 
         // Регистрация кнопки "Статистика":
         buttonStatistic = findViewById(R.id.button_network);
@@ -105,8 +100,13 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 buttonCardViewDescription, buttonCardViewGame, firstLine, secondLine, thirdLine);
         startAnimation.startAnimation();
 
+        // Устновка значений в шкалы:
+        progressBarWorker = new ProgressBarWorker(this, pbAllSolutionProblems, pbTodaySolutionProblems,
+                twAllSolutionProblems, twTodaySolutionProblems);
+        progressBarWorker.setProgress();
+
         gameCreator = new GameCreator(this, czWord, ruWord, buttonAnswerYes, buttonAnswerNo,
-                firstSmile, secondSmile);
+                firstSmile, secondSmile, progressBarWorker);
 
         // Регистрастрация "Магазина":
         alertDialogShop = new Dialog(this);

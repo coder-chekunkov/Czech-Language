@@ -23,6 +23,230 @@
     "cz_word": "Promiňte",
     "ru_word": "Извините",
     "ru_word_wrong": "Пожалуйста"
+  },
+  "6": {
+    "cz_word": "Léto",
+    "ru_word": "Лето",
+    "ru_word_wrong": "Весна"
+  },
+  "7": {
+    "cz_word": "Zima",
+    "ru_word": "Зима",
+    "ru_word_wrong": "Осень"
+  },
+  "8": {
+    "cz_word": "Věčný",
+    "ru_word": "Весна",
+    "ru_word_wrong": "Осень"
+  },
+  "9": {
+    "cz_word": "Podzim",
+    "ru_word": "Осень",
+    "ru_word_wrong": "Лето"
+  },
+  "10": {
+    "cz_word": "Autobus",
+    "ru_word": "Автобус",
+    "ru_word_wrong": "Трамвай"
+  },
+  "11": {
+    "cz_word": "Tramvaj",
+    "ru_word": "Трамвай",
+    "ru_word_wrong": "Троллейбус"
+  },
+  "12": {
+    "cz_word": "Podzemí",
+    "ru_word": "Метро",
+    "ru_word_wrong": "Трамвай"
+  },
+  "13": {
+    "cz_word": "Jízdenka",
+    "ru_word": "Билет",
+    "ru_word_wrong": "Проезд"
+  },
+  "14": {
+    "cz_word": "Zastávka",
+    "ru_word": "Остановка",
+    "ru_word_wrong": "Станция метро"
+  },
+  "15": {
+    "cz_word": "Stanice",
+    "ru_word": "Станция метро",
+    "ru_word_wrong": "Остановка"
+  },
+  "16": {
+    "cz_word": "Vstup",
+    "ru_word": "Вход",
+    "ru_word_wrong": "Выход"
+  },
+  "17": {
+    "cz_word": "Výstup",
+    "ru_word": "Выход",
+    "ru_word_wrong": "Вход"
+  },
+  "18": {
+    "cz_word": "Přestup",
+    "ru_word": "Переход",
+    "ru_word_wrong": "Заезд"
+  },
+  "19": {
+    "cz_word": "Banka",
+    "ru_word": "Банк",
+    "ru_word_wrong": "Банкнота"
+  },
+  "20": {
+    "cz_word": "Směnárna",
+    "ru_word": "Обменный пункт",
+    "ru_word_wrong": "Сметана"
+  },
+  "21": {
+    "cz_word": "Hotovostní provize",
+    "ru_word": "Денежная комиссия",
+    "ru_word_wrong": "Оплата"
+  },
+  "22": {
+    "cz_word": "Peníze",
+    "ru_word": "Деньги",
+    "ru_word_wrong": "Карандаш"
+  },
+  "23": {
+    "cz_word": "Rubl",
+    "ru_word": "Рубль",
+    "ru_word_wrong": "Доллар"
+  },
+  "24": {
+    "cz_word": "Dolar",
+    "ru_word": "Доллар",
+    "ru_word_wrong": "Евро"
+  },
+  "25": {
+    "cz_word": "Euro",
+    "ru_word": "Евро",
+    "ru_word_wrong": "Доллар"
+  },
+  "26": {
+    "cz_word": "Česká koruna",
+    "ru_word": "Чешская крона",
+    "ru_word_wrong": "Чешское пиво"
+  },
+  "27": {
+    "cz_word": "Pomoc",
+    "ru_word": "Помогите",
+    "ru_word_wrong": "Прогуляться"
+  },
+  "28": {
+    "cz_word": "Policie",
+    "ru_word": "Полиция",
+    "ru_word_wrong": "Политика"
+  },
+  "29": {
+    "cz_word": "Záchranná služba",
+    "ru_word": "Скорая помощь",
+    "ru_word_wrong": "Газовая служба"
+  },
+  "30": {
+    "cz_word": "Oheň",
+    "ru_word": "Пожар",
+    "ru_word_wrong": "Вода"
+  },
+  "31": {
+    "cz_word": "Barák",
+    "ru_word": "Дом",
+    "ru_word_wrong": "Сарай"
+  },
+  "32": {
+    "cz_word": "Bydliště",
+    "ru_word": "Местожительство",
+    "ru_word_wrong": "Плохой человек"
+  },
+  "33": {
+    "cz_word": "Čuchat",
+    "ru_word": "Нюхать",
+    "ru_word_wrong": "Чихать"
+  },
+  "34": {
+    "cz_word": "Kýchnutí",
+    "ru_word": "Чихать",
+    "ru_word_wrong": "Нюхать"
+  },
+  "35": {
+    "cz_word": "Letadlo",
+    "ru_word": "Самолет",
+    "ru_word_wrong": "Птица"
+  },
+  "36": {
+    "cz_word": "Ptactvo",
+    "ru_word": "Птицы",
+    "ru_word_wrong": "Самолет"
+  },
+  "37": {
+    "cz_word": "Spodky",
+    "ru_word": "Трусы",
+    "ru_word_wrong": "Колготки"
+  },
+  "38": {
+    "cz_word": "Mýdlo",
+    "ru_word": "Мыло",
+    "ru_word_wrong": "Плохой человек"
+  },
+  "39": {
+    "cz_word": "Оkurky",
+    "ru_word": "Огурцы",
+    "ru_word_wrong": "Окурки"
+  },
+  "40": {
+    "cz_word": "Ovoce",
+    "ru_word": "Фрукты",
+    "ru_word_wrong": "Овощи"
+  },
+  "41": {
+    "cz_word": "Zelenina",
+    "ru_word": "Овощи",
+    "ru_word_wrong": "Фрукты"
+  },
+  "42": {
+    "cz_word": "Pádlo",
+    "ru_word": "Весло",
+    "ru_word_wrong": "Повидло"
+  },
+  "43": {
+    "cz_word": "Počítač",
+    "ru_word": "Компьютер",
+    "ru_word_wrong": "Книга"
+  },
+  "44": {
+    "cz_word": "Rezervovat",
+    "ru_word": "Книга",
+    "ru_word_wrong": "Регистрация"
+  },
+  "45": {
+    "cz_word": "Pohanka",
+    "ru_word": "Гречка",
+    "ru_word_wrong": "Гриб"
+  },
+  "46": {
+    "cz_word": "Houba",
+    "ru_word": "Гриб",
+    "ru_word_wrong": "Болезнь"
+  },
+  "47": {
+    "cz_word": "Pozor",
+    "ru_word": "Внимание",
+    "ru_word_wrong": "Позор"
+  },
+  "48": {
+    "cz_word": "Ostuda",
+    "ru_word": "Позор",
+    "ru_word_wrong": "Победа"
+  },
+  "49": {
+    "cz_word": "Sklep",
+    "ru_word": "Подвал",
+    "ru_word_wrong": "Окоп"
+  },
+  "50": {
+    "cz_word": "Sleva",
+    "ru_word": "Скидка",
+    "ru_word_wrong": "Слива"
   }
-
 }
