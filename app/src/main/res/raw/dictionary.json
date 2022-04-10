@@ -248,5 +248,255 @@
     "cz_word": "Sleva",
     "ru_word": "Скидка",
     "ru_word_wrong": "Слива"
+  },
+  "51": {
+    "cz_word": "Stůl",
+    "ru_word": "Стол",
+    "ru_word_wrong": "Стул"
+  },
+  "52": {
+    "cz_word": "Židle",
+    "ru_word": "Стул",
+    "ru_word_wrong": "Стол"
+  },
+  "53": {
+    "cz_word": "Člověk",
+    "ru_word": "Человек",
+    "ru_word_wrong": "Муж"
+  },
+  "54": {
+    "cz_word": "Muž",
+    "ru_word": "Мужчина",
+    "ru_word_wrong": "Муж"
+  },
+  "55": {
+    "cz_word": "Manžel",
+    "ru_word": "Муж",
+    "ru_word_wrong": "Мужчина"
+  },
+  "56": {
+    "cz_word": "Zena",
+    "ru_word": "Женщина",
+    "ru_word_wrong": "Жена"
+  },
+  "57": {
+    "cz_word": "Manželka",
+    "ru_word": "Жена",
+    "ru_word_wrong": "Женщина"
+  },
+  "58": {
+    "cz_word": "Dítě",
+    "ru_word": "Ребенок",
+    "ru_word_wrong": "Девочка"
+  },
+  "59": {
+    "cz_word": "Chlapec",
+    "ru_word": "Мальчик",
+    "ru_word_wrong": "Девочка"
+  },
+  "60": {
+    "cz_word": "Dívka",
+    "ru_word": "Девочка",
+    "ru_word_wrong": "Мальчик"
+  },
+  "61": {
+    "cz_word": "Přítel",
+    "ru_word": "Друг",
+    "ru_word_wrong": "Враг"
+  },
+  "62": {
+    "cz_word": "Nepřítel",
+    "ru_word": "Враг",
+    "ru_word_wrong": "Друг"
+  },
+  "63": {
+    "cz_word": "Host",
+    "ru_word": "Гость",
+    "ru_word_wrong": "Гостиная"
+  },
+  "64": {
+    "cz_word": "Obývací pokoj",
+    "ru_word": "Гостиная",
+    "ru_word_wrong": "Гость"
+  },
+  "65": {
+    "cz_word": "Rodiče",
+    "ru_word": "Родители",
+    "ru_word_wrong": "Родственник"
+  },
+  "66": {
+    "cz_word": "Rodina",
+    "ru_word": "Семья",
+    "ru_word_wrong": "Родина"
+  },
+  "67": {
+    "cz_word": "Vlast",
+    "ru_word": "Родина",
+    "ru_word_wrong": "Семья"
+  },
+  "68": {
+    "cz_word": "Otec",
+    "ru_word": "Отец",
+    "ru_word_wrong": "Мать"
+  },
+  "69": {
+    "cz_word": "Matka",
+    "ru_word": "Мать",
+    "ru_word_wrong": "Отец"
+  },
+  "70": {
+    "cz_word": "Syn",
+    "ru_word": "Сын",
+    "ru_word_wrong": "Дочь"
+  },
+  "71": {
+    "cz_word": "Dcera",
+    "ru_word": "Дочь",
+    "ru_word_wrong": "Сын"
+  },
+  "72": {
+    "cz_word": "Dědeček",
+    "ru_word": "Дедушка",
+    "ru_word_wrong": "Бабушка"
+  },
+  "73": {
+    "cz_word": "Babička",
+    "ru_word": "Бабушка",
+    "ru_word_wrong": "Дедушка"
+  },
+  "74": {
+    "cz_word": "Tchán",
+    "ru_word": "Тесть (свекор)",
+    "ru_word_wrong": "Теща (свекровь)"
+  },
+  "75": {
+    "cz_word": "Tchyně",
+    "ru_word": "Теща (свекровь)",
+    "ru_word_wrong": "Тесть (свекор)"
+  },
+  "76": {
+    "cz_word": "Strýc",
+    "ru_word": "Дядя",
+    "ru_word_wrong": "Тетя"
+  },
+  "77": {
+    "cz_word": "Teta",
+    "ru_word": "Тетя",
+    "ru_word_wrong": "Дядя"
+  },
+  "78": {
+    "cz_word": "Bratr",
+    "ru_word": "Брат",
+    "ru_word_wrong": "Сестра"
+  },
+  "79": {
+    "cz_word": "Sestra",
+    "ru_word": "Сестра",
+    "ru_word_wrong": "Брат"
+  },
+  "80": {
+    "cz_word": "Bratranec",
+    "ru_word": "Двоюродный брат",
+    "ru_word_wrong": "Двоюродная сестра"
+  },
+  "81": {
+    "cz_word": "Sestřenice",
+    "ru_word": "Двоюродная сестра",
+    "ru_word_wrong": "Двоюродный брат"
+  },
+  "82": {
+    "cz_word": "Práce",
+    "ru_word": "Работа",
+    "ru_word_wrong": "Практика"
+  },
+  "83": {
+    "cz_word": "Praxe",
+    "ru_word": "Практика",
+    "ru_word_wrong": "Работа"
+  },
+  "84": {
+    "cz_word": "Učitel",
+    "ru_word": "Учитель",
+    "ru_word_wrong": "Водитель"
+  },
+  "85": {
+    "cz_word": "Řidič",
+    "ru_word": "Водитель",
+    "ru_word_wrong": "Учитель"
+  },
+  "86": {
+    "cz_word": "Pracovník",
+    "ru_word": "Рабочий",
+    "ru_word_wrong": "Справочник"
+  },
+  "87": {
+    "cz_word": "Adresář",
+    "ru_word": "Справочник",
+    "ru_word_wrong": "Рабочий"
+  },
+  "88": {
+    "cz_word": "Inženýr",
+    "ru_word": "Инженер",
+    "ru_word_wrong": "Студент"
+  },
+  "89": {
+    "cz_word": "Student",
+    "ru_word": "Студент",
+    "ru_word_wrong": "Инженер"
+  },
+  "90": {
+    "cz_word": "Lékař",
+    "ru_word": "Врач",
+    "ru_word_wrong": "Медсестра"
+  },
+  "91": {
+    "cz_word": "Zdravotní sestra",
+    "ru_word": "Медсестра",
+    "ru_word_wrong": "Врач"
+  },
+  "92": {
+    "cz_word": "Prodavač",
+    "ru_word": "Продавец",
+    "ru_word_wrong": "Журналист"
+  },
+  "93": {
+    "cz_word": "Novinář",
+    "ru_word": "Журналист",
+    "ru_word_wrong": "Продавец"
+  },
+  "94": {
+    "cz_word": "Účetní",
+    "ru_word": "Бухгалтер",
+    "ru_word_wrong": "Библиотекарь"
+  },
+  "95": {
+    "cz_word": "Malíř",
+    "ru_word": "Художник",
+    "ru_word_wrong": "Маляр"
+  },
+  "96": {
+    "cz_word": "Země",
+    "ru_word": "Страна",
+    "ru_word_wrong": "Земля"
+  },
+  "97": {
+    "cz_word": "Krajan",
+    "ru_word": "Земля",
+    "ru_word_wrong": "Страна"
+  },
+  "98": {
+    "cz_word": "Rusko",
+    "ru_word": "Россия",
+    "ru_word_wrong": "Румыния"
+  },
+  "99": {
+    "cz_word": "Rumunsko",
+    "ru_word": "Румыния",
+    "ru_word_wrong": "Россия"
+  },
+  "100": {
+    "cz_word": "Чехия",
+    "ru_word": "Českо",
+    "ru_word_wrong": "Slovensko"
   }
 }
