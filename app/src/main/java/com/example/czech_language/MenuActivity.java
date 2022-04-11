@@ -118,7 +118,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
         // Регистрастрация "Настройки":
         alertDialogSettings = new Dialog(this);
-        settingsWorker = new Settings(this, alertDialogSettings);
+        settingsWorker = new Settings(this, alertDialogSettings, progressBarWorker);
 
         // Регистрастрация "Статистика":
         alertDialogStatistic = new Dialog(this);

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import com.example.czech_language.MenuActivity;
 import com.example.czech_language.R;
+import com.example.czech_language.static_worker.ProgressBarWorker;
 import com.example.czech_language.statistic_worker.StatisticCreator;
 
 public class Settings extends MenuActivity implements View.OnClickListener {
@@ -20,10 +21,14 @@ public class Settings extends MenuActivity implements View.OnClickListener {
     ImageView buttonCloseSettings, buttonCallDevelop, buttonReview, buttonRestart;
     Context context;
 
-    public Settings(Context context, Dialog alertDialogSettings) {
+    ProgressBarWorker progressBarWorker;
+
+    public Settings(Context context, Dialog alertDialogSettings, ProgressBarWorker progressBarWorker) {
         this.alertDialogSettings = alertDialogSettings;
         alertDialogSettings.setContentView(R.layout.settings_tab);
         this.context = context;
+
+        this.progressBarWorker = progressBarWorker;
 
         // Регистрация кнопки "Закрыть":
         buttonCloseSettings = alertDialogSettings.findViewById(R.id.close_alert_dialog_settings);
@@ -91,6 +96,7 @@ public class Settings extends MenuActivity implements View.OnClickListener {
         Toast toastRestartGame = Toast.makeText(context.getApplicationContext(), "Статистика сброшена!", Toast.LENGTH_SHORT);
         toastRestartGame.show();
 
+        progressBarWorker.setProgress();
         alertDialogSettings.dismiss();
     }
 }

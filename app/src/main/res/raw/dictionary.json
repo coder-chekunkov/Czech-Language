@@ -498,5 +498,205 @@
     "cz_word": "Чехия",
     "ru_word": "Českо",
     "ru_word_wrong": "Slovensko"
+  },
+  "101": {
+    "cz_word": "Zvíře",
+    "ru_word": "Животное",
+    "ru_word_wrong": "Зверь"
+  },
+  "102": {
+    "cz_word": "Bestie",
+    "ru_word": "Зверь",
+    "ru_word_wrong": "Животное"
+  },
+  "103": {
+    "cz_word": "Kočka",
+    "ru_word": "Кошка",
+    "ru_word_wrong": "Кружка"
+  },
+  "104": {
+    "cz_word": "Džbánek",
+    "ru_word": "Кружка",
+    "ru_word_wrong": "Кошка"
+  },
+  "105": {
+    "cz_word": "Pes",
+    "ru_word": "Собака",
+    "ru_word_wrong": "Перо"
+  },
+  "106": {
+    "cz_word": "Město",
+    "ru_word": "Город",
+    "ru_word_wrong": "Место"
+  },
+  "107": {
+    "cz_word": "Místo",
+    "ru_word": "Место",
+    "ru_word_wrong": "Город"
+  },
+  "108": {
+    "cz_word": "Škola",
+    "ru_word": "Школа",
+    "ru_word_wrong": "Стадион"
+  },
+  "109": {
+    "cz_word": "Divadlo",
+    "ru_word": "Театр",
+    "ru_word_wrong": "Диван"
+  },
+  "110": {
+    "cz_word": "Pohovka",
+    "ru_word": "Диван",
+    "ru_word_wrong": "Театр"
+  },
+  "111": {
+    "cz_word": "Ulice",
+    "ru_word": "Улица",
+    "ru_word_wrong": "Каюта"
+  },
+  "112": {
+    "cz_word": "Náměstí",
+    "ru_word": "Площадь",
+    "ru_word_wrong": "Вокзал"
+  },
+  "113": {
+    "cz_word": "Vlakové nádraží",
+    "ru_word": "Вокзал",
+    "ru_word_wrong": "Площадь"
+  },
+  "114": {
+    "cz_word": "Nemochice",
+    "ru_word": "Больница",
+    "ru_word_wrong": "Прачечная"
+  },
+  "115": {
+    "cz_word": "Prádelna",
+    "ru_word": "Прачечная",
+    "ru_word_wrong": "Больница"
+  },
+  "116": {
+    "cz_word": "Obchod",
+    "ru_word": "Магазин",
+    "ru_word_wrong": "Кладбище"
+  },
+  "117": {
+    "cz_word": "Hřbitov",
+    "ru_word": "Кладбище",
+    "ru_word_wrong": "Магазин"
+  },
+  "118": {
+    "cz_word": "Byt",
+    "ru_word": "Квартира",
+    "ru_word_wrong": "Существование"
+  },
+  "119": {
+    "cz_word": "Existence",
+    "ru_word": "Сущестование",
+    "ru_word_wrong": "Квартира"
+  },
+  "120": {
+    "cz_word": "Kuchyně",
+    "ru_word": "Кухня",
+    "ru_word_wrong": "Балкон"
+  },
+  "121": {
+    "cz_word": "Balkón",
+    "ru_word": "Балкон",
+    "ru_word_wrong": "Ванная"
+  },
+  "122": {
+    "cz_word": "Koupelna",
+    "ru_word": "Ванная",
+    "ru_word_wrong": "Кухня"
+  },
+  "123": {
+    "cz_word": "Sprcha",
+    "ru_word": "Душ",
+    "ru_word_wrong": "Спальня"
+  },
+  "124": {
+    "cz_word": "Ložnice",
+    "ru_word": "Спальня",
+    "ru_word_wrong": "Туалет"
+  },
+  "125": {
+    "cz_word": "Toaleta",
+    "ru_word": "Туалет",
+    "ru_word_wrong": "Спальня"
+  },
+  "126": {
+    "cz_word": "Podlaha",
+    "ru_word": "Пол",
+    "ru_word_wrong": "Потолок"
+  },
+  "127": {
+    "cz_word": "Strop",
+    "ru_word": "Потолок",
+    "ru_word_wrong": "Пол"
+  },
+  "128": {
+    "cz_word": "Podlaha",
+    "ru_word": "Этаж",
+    "ru_word_wrong": "Лифт"
+  },
+  "129": {
+    "cz_word": "Výtah",
+    "ru_word": "Лифт",
+    "ru_word_wrong": "Этаж"
+  },
+  "130": {
+    "cz_word": "Obývací pokoj",
+    "ru_word": "Зал",
+    "ru_word_wrong": "Коридор"
+  },
+  "131": {
+    "cz_word": "Koridor",
+    "ru_word": "Коридор",
+    "ru_word_wrong": "Зал"
+  },
+  "132": {
+    "cz_word": "Dveře",
+    "ru_word": "Дверь",
+    "ru_word_wrong": "Окно"
+  },
+  "133": {
+    "cz_word": "Okno",
+    "ru_word": "Окно",
+    "ru_word_wrong": "Дверь"
+  },
+  "134": {
+    "cz_word": "Klíč",
+    "ru_word": "Ключ",
+    "ru_word_wrong": "Подоконик"
+  },
+  "135": {
+    "cz_word": "Postel",
+    "ru_word": "Кровать",
+    "ru_word_wrong": "Подушка"
+  },
+  "136": {
+    "cz_word": "Polštář",
+    "ru_word": "Подушка",
+    "ru_word_wrong": "Одеяло"
+  },
+  "137": {
+    "cz_word": "Deka",
+    "ru_word": "Одеяло",
+    "ru_word_wrong": "Кровать"
+  },
+  "138": {
+    "cz_word": "Lednička",
+    "ru_word": "Холодильник",
+    "ru_word_wrong": "Зеркало"
+  },
+  "139": {
+    "cz_word": "Zrcadlo",
+    "ru_word": "Зеркало",
+    "ru_word_wrong": "Звездопад"
+  },
+  "140": {
+    "cz_word": "Hvězdopád",
+    "ru_word": "Звездопад",
+    "ru_word_wrong": "Зеркало"
   }
 }

@@ -48,7 +48,7 @@ public class GameCreator implements View.OnClickListener {
     // Метод вывода слов на экран:
     public void createWordGame() {
 
-        int numberWord = (int) (Math.random() * 100) + 1;
+        int numberWord = (int) (Math.random() * 140) + 1;
         int buff = (int) (Math.random() * (10)) + 1;
         isWrongWord = buff % 2 == 0;
 
