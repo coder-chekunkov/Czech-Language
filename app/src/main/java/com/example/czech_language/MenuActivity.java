@@ -10,6 +10,7 @@ import com.example.czech_language.game_worker.GameCreator;
 import com.example.czech_language.static_worker.CardChanger;
 import com.example.czech_language.static_worker.ProgressBarWorker;
 import com.example.czech_language.static_worker.StartAnimation;
+import com.example.czech_language.statistic_worker.StatisticCreator;
 import com.example.czech_language.tabs_worker.*;
 
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
@@ -34,7 +35,6 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     RelativeLayout layoutDescription;
     ViewFlipper vf;
     CardChanger cardChanger;
-    boolean isGame = false;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,12 +105,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 twAllSolutionProblems, twTodaySolutionProblems);
         progressBarWorker.setProgress();
 
-        gameCreator = new GameCreator(this, czWord, ruWord, buttonAnswerYes, buttonAnswerNo,
-                firstSmile, secondSmile, progressBarWorker);
-
         // Регистрастрация "Магазина":
         alertDialogShop = new Dialog(this);
-        shopWorker = new Shop(this, alertDialogShop);
+        shopWorker = new Shop(this, alertDialogShop, progressBarWorker);
 
         // Регистрастрация "Информации":
         alertDialogInformation = new Dialog(this);
@@ -127,6 +124,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         // Регистрастрация "Конец игры":
         alertDialogGameOver = new Dialog(this);
         gameOverWorker = new GameOver(alertDialogGameOver);
+
+        gameCreator = new GameCreator(this, czWord, ruWord, buttonAnswerYes, buttonAnswerNo,
+                firstSmile, secondSmile, progressBarWorker, gameOverWorker, cardChanger);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -152,22 +152,22 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             // Нажатие на кнопку "Играть":
             case R.id.button_play_game:
             case R.id.relative_layout_game:
-                startChanger();
-                gameCreator.createWordGame();
+                if (isOpportunityToPlay()) {
+                    cardChanger.startChanger();
+                    gameCreator.createWordGame();
+                } else {
+                    gameOverWorker.showGameOver();
+                }
                 break;
         }
     }
 
-    // Метод для смены карточек игры:
-    public void startChanger() {
-        int buffGame;
-        if (!isGame) {
-            buffGame = 1;
-            isGame = true;
-        } else {
-            buffGame = 2;
-            isGame = false;
-        }
-        cardChanger.changeCard(buffGame);
+    // Проверка наличия игр на сегодня:
+    public boolean isOpportunityToPlay() {
+        int lastGames = StatisticCreator.getLastGames(this);
+
+        return lastGames != 0;
     }
+
+
 }

@@ -31,7 +31,7 @@ public class StatisticCreator extends MenuActivity {
         int goodAnswers = mStatistic.getInt("good_answers", 0);
         int badAnswers = mStatistic.getInt("bas_answers", 0);
         int allAnswers = mStatistic.getInt("all_games", 0);
-        int lastAnswers = mStatistic.getInt("last_games", 80);
+        int lastAnswers = mStatistic.getInt("last_games", 0);
 
         editor.putInt("good_answers", goodAnswers + good);
         editor.putInt("bas_answers", badAnswers + bad);
@@ -48,8 +48,21 @@ public class StatisticCreator extends MenuActivity {
         editor.putInt("good_answers", 0);
         editor.putInt("bas_answers", 0);
         editor.putInt("all_games", 0);
-        editor.putInt("last_games", 80);
         editor.apply();
+    }
+
+    // Получение дополнительных 10 игр:
+    public static void addRewardGames(Context context, ProgressBarWorker progressBarWorker){
+        SharedPreferences mStatistic = context.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = mStatistic.edit();
+
+        int lastAnswers = mStatistic.getInt("last_games", 80);
+
+        if (lastAnswers >= 70) editor.putInt("last_games", 80);
+        else editor.putInt("last_games", lastAnswers + 10);
+        editor.apply();
+
+        progressBarWorker.setProgress();
     }
 
     // Получение количетсва всех сыгранных игр:

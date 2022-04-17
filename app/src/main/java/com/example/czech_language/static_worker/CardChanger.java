@@ -8,6 +8,7 @@ public class CardChanger {
 
     ViewFlipper vf;
     ImageButton buttonPlay;
+    boolean isGame = false;
 
     public CardChanger(ViewFlipper vf, ImageButton buttonPlay){
         this.vf = vf;
@@ -22,6 +23,19 @@ public class CardChanger {
         } else {
             buttonPlay.setImageResource(R.drawable.icon_button_start);
         }
+    }
+
+    // Метод для смены карточек игры:
+    public void startChanger() {
+        int buffGame;
+        if (!isGame) {
+            buffGame = 1;
+            isGame = true;
+        } else {
+            buffGame = 2;
+            isGame = false;
+        }
+       changeCard(buffGame);
     }
 
 }

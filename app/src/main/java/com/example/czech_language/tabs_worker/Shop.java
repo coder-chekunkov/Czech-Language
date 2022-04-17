@@ -11,14 +11,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.example.czech_language.R;
+import com.example.czech_language.static_worker.ProgressBarWorker;
+import com.example.czech_language.statistic_worker.StatisticCreator;
 
 public class Shop implements View.OnClickListener {
 
     Dialog alertDialogShop;
     ImageView buttonCloseShop, buttonGetReward;
     Context context;
+    ProgressBarWorker progressBarWorker;
 
-    public Shop(Context context, Dialog alertDialogShop) {
+    public Shop(Context context, Dialog alertDialogShop, ProgressBarWorker progressBarWorker) {
         this.alertDialogShop = alertDialogShop;
         alertDialogShop.setContentView(R.layout.shop_tab);
 
@@ -30,6 +33,7 @@ public class Shop implements View.OnClickListener {
         buttonGetReward = alertDialogShop.findViewById(R.id.button_shop_reward);
         buttonGetReward.setOnClickListener(this);
 
+        this.progressBarWorker = progressBarWorker;
         this.context = context;
     }
 
@@ -54,7 +58,11 @@ public class Shop implements View.OnClickListener {
 
     // Запрос рекламы для получения дополнительных игр:
     public void getReward() {
-        if (isConnectedInternet()) System.out.println("get reward");
+        if (isConnectedInternet()) {
+            Toast toastNoInternet = Toast.makeText(context.getApplicationContext(), "Получено 10 дополнительных игр!", Toast.LENGTH_SHORT);
+            toastNoInternet.show();
+            StatisticCreator.addRewardGames(context, progressBarWorker);
+        }
         else {
             Toast toastNoInternet = Toast.makeText(context.getApplicationContext(), "Проверьте подключение к интернету!", Toast.LENGTH_SHORT);
             toastNoInternet.show();

@@ -5,28 +5,34 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.czech_language.MenuActivity;
 import com.example.czech_language.R;
+import com.example.czech_language.static_worker.CardChanger;
 import com.example.czech_language.static_worker.ProgressBarWorker;
 import com.example.czech_language.static_worker.StartAnimation;
 import com.example.czech_language.statistic_worker.StatisticCreator;
+import com.example.czech_language.tabs_worker.GameOver;
 import org.json.JSONException;
 
 import java.io.IOException;
 
-public class GameCreator implements View.OnClickListener {
+public class GameCreator extends MenuActivity implements View.OnClickListener {
 
     TextView czWord, ruWord;
     ImageButton buttonAnswerYes, buttonAnswerNo, firstSmile, secondSmile;
     Context context;
 
     DictionaryWord word;
-    public ProgressBarWorker progressBarWorker;
+    ProgressBarWorker progressBarWorker;
+    GameOver gameOverWorker;
+    CardChanger cardChangerWorker;
     boolean isWrongWord;
 
     public GameCreator(Context context, TextView czWord, TextView ruWord,
                        ImageButton buttonAnswerYes, ImageButton buttonAnswerNo,
                        ImageButton firstSmile, ImageButton secondSmile,
-                       ProgressBarWorker progressBarWorker) {
+                       ProgressBarWorker progressBarWorker, GameOver gameOverWorker,
+                       CardChanger cardChangerWorker) {
         this.context = context;
         this.czWord = czWord;
         this.ruWord = ruWord;
@@ -37,6 +43,8 @@ public class GameCreator implements View.OnClickListener {
         this.buttonAnswerYes.setOnClickListener(this);
         this.buttonAnswerNo.setOnClickListener(this);
         this.progressBarWorker = progressBarWorker;
+        this.gameOverWorker = gameOverWorker;
+        this.cardChangerWorker = cardChangerWorker;
     }
 
     @Override
@@ -89,6 +97,13 @@ public class GameCreator implements View.OnClickListener {
         }
 
         progressBarWorker.setProgress();
-        createWordGame();
+
+        int lastGames = StatisticCreator.getLastGames(context);
+
+        if (lastGames != 0) createWordGame();
+        else {
+            gameOverWorker.showGameOver();
+            cardChangerWorker.startChanger();
+        }
     }
 }

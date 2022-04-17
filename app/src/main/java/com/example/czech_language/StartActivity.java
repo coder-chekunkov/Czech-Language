@@ -1,36 +1,28 @@
 package com.example.czech_language;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class StartActivity extends AppCompatActivity implements View.OnClickListener {
-
-    ImageView img;
+public class StartActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        img = findViewById(R.id.imageView2);
-        img.setOnClickListener(this);
-
 //        TimeWorker timeWorker = new TimeWorker();
 //        Thread time = new Thread(timeWorker);
 //        time.start();
-    }
 
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.imageView2) {
-            Intent goToHome = new Intent(StartActivity.this, MenuActivity.class);
-            startActivity(goToHome);
+        new Handler().postDelayed(() -> {
+            Intent go_to_home = new Intent(StartActivity.this, MenuActivity.class);
+            startActivity(go_to_home);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             finish();
-        }
+        }, 1000);
     }
-
 }
