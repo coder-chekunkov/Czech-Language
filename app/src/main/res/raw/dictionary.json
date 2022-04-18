@@ -698,5 +698,155 @@
     "cz_word": "Hvězdopád",
     "ru_word": "Звездопад",
     "ru_word_wrong": "Зеркало"
+  },
+  "141": {
+    "cz_word": "Jídlo",
+    "ru_word": "Еда",
+    "ru_word_wrong": "Жидкость"
+  },
+  "142": {
+    "cz_word": "Chléb",
+    "ru_word": "Хлеб",
+    "ru_word_wrong": "Булка"
+  },
+  "143": {
+    "cz_word": "Bulka",
+    "ru_word": "Булка",
+    "ru_word_wrong": "Будка"
+  },
+  "144": {
+    "cz_word": "Máslo",
+    "ru_word": "Масло",
+    "ru_word_wrong": "Краски"
+  },
+  "145": {
+    "cz_word": "Sýr",
+    "ru_word": "Сыр",
+    "ru_word_wrong": "Господин"
+  },
+  "146": {
+    "cz_word": "Klobása",
+    "ru_word": "Колбаса",
+    "ru_word_wrong": "Батон"
+  },
+  "147": {
+    "cz_word": "Pepř",
+    "ru_word": "Перец",
+    "ru_word_wrong": "Бумага"
+  },
+  "148": {
+    "cz_word": "Sůl",
+    "ru_word": "Соль",
+    "ru_word_wrong": "Сахар"
+  },
+  "149": {
+    "cz_word": "Cukr",
+    "ru_word": "Сахар",
+    "ru_word_wrong": "Соль"
+  },
+  "150": {
+    "cz_word": "Bobule",
+    "ru_word": "Ягода",
+    "ru_word_wrong": "Жвачка"
+  },
+  "151": {
+    "cz_word": "Džem",
+    "ru_word": "Варенье",
+    "ru_word_wrong": "Мед"
+  },
+  "152": {
+    "cz_word": "Miláček",
+    "ru_word": "Мед",
+    "ru_word_wrong": "Варенье"
+  },
+  "153": {
+    "cz_word": "Mrkev",
+    "ru_word": "Морковь",
+    "ru_word_wrong": "Картофель"
+  },
+  "154": {
+    "cz_word": "Brambor",
+    "ru_word": "Картофель",
+    "ru_word_wrong": "Морковь"
+  },
+  "155": {
+    "cz_word": "Vodní meloun",
+    "ru_word": "Арбуз",
+    "ru_word_wrong": "Дыня"
+  },
+  "156": {
+    "cz_word": "Meloun",
+    "ru_word": "Дыня",
+    "ru_word_wrong": "Арбуз"
+  },
+  "157": {
+    "cz_word": "Dort",
+    "ru_word": "Пироженое",
+    "ru_word_wrong": "Торт"
+  },
+  "158": {
+    "cz_word": "Koláč",
+    "ru_word": "Торт",
+    "ru_word_wrong": "Пироженое"
+  },
+  "159": {
+    "cz_word": "Jablko",
+    "ru_word": "Яблоко",
+    "ru_word_wrong": "Груша"
+  },
+  "160": {
+    "cz_word": "Hruška",
+    "ru_word": "Груша",
+    "ru_word_wrong": "Яблоко"
+  },
+  "161": {
+    "cz_word": "Rajče",
+    "ru_word": "Помидор",
+    "ru_word_wrong": "Огурец"
+  },
+  "162": {
+    "cz_word": "Voda",
+    "ru_word": "Вода",
+    "ru_word_wrong": "Водка"
+  },
+  "163": {
+    "cz_word": "Vodka",
+    "ru_word": "Водка",
+    "ru_word_wrong": "Вода"
+  },
+  "164": {
+    "cz_word": "Meruňka",
+    "ru_word": "Абрикос",
+    "ru_word_wrong": "Мандарин"
+  },
+  "165": {
+    "cz_word": "Mandarinka",
+    "ru_word": "Мандарин",
+    "ru_word_wrong": "Абрикос"
+  },
+  "166": {
+    "cz_word": "Džus",
+    "ru_word": "Сок",
+    "ru_word_wrong": "Компот"
+  },
+  "167": {
+    "cz_word": "Kompot",
+    "ru_word": "Компот",
+    "ru_word_wrong": "Сок"
+  },
+  "168": {
+    "cz_word": "Soda",
+    "ru_word": "Газировка",
+    "ru_word_wrong": "Лимонад"
+  },
+  "169": {
+    "cz_word": "Limonáda",
+    "ru_word": "Лимонад",
+    "ru_word_wrong": "Газировка"
+  },
+  "170": {
+    "cz_word": "Polévka",
+    "ru_word": "Суп",
+    "ru_word_wrong": "Каша"
   }
 }
