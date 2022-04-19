@@ -12,7 +12,7 @@ public class ProgressBarWorker {
     ProgressBar pbAllSolutionProblems, pbTodaySolutionProblems;
     Context context;
 
-    int allProblems = 170, todayMaxProblems = 80;
+    int allProblems = 230, todayMaxProblems = 80;
 
     public ProgressBarWorker(Context context, ProgressBar pbAllSolutionProblems, ProgressBar pbTodaySolutionProblems,
                              TextView twAllSolutionProblems, TextView twTodaySolutionProblems) {

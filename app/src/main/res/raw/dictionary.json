@@ -848,5 +848,305 @@
     "cz_word": "Polévka",
     "ru_word": "Суп",
     "ru_word_wrong": "Каша"
+  },
+  "171": {
+    "cz_word": "Čaj",
+    "ru_word": "Чай",
+    "ru_word_wrong": "Кофе"
+  },
+  "172": {
+    "cz_word": "Káva",
+    "ru_word": "Кофе",
+    "ru_word_wrong": "Чай"
+  },
+  "173": {
+    "cz_word": "Nudle",
+    "ru_word": "Лапша",
+    "ru_word_wrong": "Шоколад"
+  },
+  "174": {
+    "cz_word": "Hovězí",
+    "ru_word": "Говядина",
+    "ru_word_wrong": "Свинина"
+  },
+  "175": {
+    "cz_word": "Vepřové",
+    "ru_word": "Свинина",
+    "ru_word_wrong": "Говядина"
+  },
+  "176": {
+    "cz_word": "Jablko",
+    "ru_word": "Яблоко",
+    "ru_word_wrong": "Виноград"
+  },
+  "177": {
+    "cz_word": "Hroznová",
+    "ru_word": "Виноград",
+    "ru_word_wrong": "Груша"
+  },
+  "178": {
+    "cz_word": "Slepice",
+    "ru_word": "Курица",
+    "ru_word_wrong": "Рыба"
+  },
+  "179": {
+    "cz_word": "Ryba",
+    "ru_word": "Рыба",
+    "ru_word_wrong": "Птица"
+  },
+  "180": {
+    "cz_word": "Citrón",
+    "ru_word": "Лимон",
+    "ru_word_wrong": "Лимонад"
+  },
+  "181": {
+    "cz_word": "Sladkost",
+    "ru_word": "Сладость",
+    "ru_word_wrong": "Мороженое"
+  },
+  "182": {
+    "cz_word": "Zmrzlina",
+    "ru_word": "Мороженое",
+    "ru_word_wrong": "Смородина"
+  },
+  "183": {
+    "cz_word": "Vejce",
+    "ru_word": "Яйцо",
+    "ru_word_wrong": "Орех"
+  },
+  "184": {
+    "cz_word": "Ořech",
+    "ru_word": "Орех",
+    "ru_word_wrong": "Яйцо"
+  },
+  "185": {
+    "cz_word": "Sálek",
+    "ru_word": "Чашка",
+    "ru_word_wrong": "Стакан"
+  },
+  "186": {
+    "cz_word": "Pohár",
+    "ru_word": "Стакан",
+    "ru_word_wrong": "Чашка"
+  },
+  "187": {
+    "cz_word": "Talíř",
+    "ru_word": "Тарелка",
+    "ru_word_wrong": "Ведро"
+  },
+  "188": {
+    "cz_word": "Vidlička",
+    "ru_word": "Вилка",
+    "ru_word_wrong": "Ложка"
+  },
+  "189": {
+    "cz_word": "Lžíce",
+    "ru_word": "Ложка",
+    "ru_word_wrong": "Вилка"
+  },
+  "190": {
+    "cz_word": "Nůž",
+    "ru_word": "Нож",
+    "ru_word_wrong": "Ножницы"
+  },
+  "191": {
+    "cz_word": "Nůžky",
+    "ru_word": "Ножницы",
+    "ru_word_wrong": "Нож"
+  },
+  "192": {
+    "cz_word": "Podšálek",
+    "ru_word": "Блюдце",
+    "ru_word_wrong": "Бутылка"
+  },
+  "193": {
+    "cz_word": "Láhev",
+    "ru_word": "Бутылка",
+    "ru_word_wrong": "Блюдце"
+  },
+  "194": {
+    "cz_word": "Snídaně",
+    "ru_word": "Завтрак",
+    "ru_word_wrong": "Сметана"
+  },
+  "195": {
+    "cz_word": "Večeře",
+    "ru_word": "Ужин",
+    "ru_word_wrong": "Вечер"
+  },
+  "196": {
+    "cz_word": "Oběd",
+    "ru_word": "Обед",
+    "ru_word_wrong": "Полдник"
+  },
+  "197": {
+    "cz_word": "Čas",
+    "ru_word": "Время",
+    "ru_word_wrong": "Час"
+  },
+  "198": {
+    "cz_word": "Rok",
+    "ru_word": "Год",
+    "ru_word_wrong": "Судьба"
+  },
+  "199": {
+    "cz_word": "Měsíc",
+    "ru_word": "Месяц",
+    "ru_word_wrong": "Луна"
+  },
+  "200": {
+    "cz_word": "Týden",
+    "ru_word": "Неделя",
+    "ru_word_wrong": "Завтрашний день"
+  },
+  "201": {
+    "cz_word": "Hodina",
+    "ru_word": "Час",
+    "ru_word_wrong": "Год"
+  },
+  "202": {
+    "cz_word": "Minuta",
+    "ru_word": "Минута",
+    "ru_word_wrong": "Секунда"
+  },
+  "203": {
+    "cz_word": "Druhý",
+    "ru_word": "Секунда",
+    "ru_word_wrong": "Друг"
+  },
+  "204": {
+    "cz_word": "Den",
+    "ru_word": "День",
+    "ru_word_wrong": "Ночь"
+  },
+  "205": {
+    "cz_word": "Noc",
+    "ru_word": "Ночь",
+    "ru_word_wrong": "Утро"
+  },
+  "206": {
+    "cz_word": "Ráno",
+    "ru_word": "Утро",
+    "ru_word_wrong": "Ночь"
+  },
+  "207": {
+    "cz_word": "Pondělí",
+    "ru_word": "Понедельник",
+    "ru_word_wrong": "Пятница"
+  },
+  "208": {
+    "cz_word": "Uterý",
+    "ru_word": "Вторник",
+    "ru_word_wrong": "Утро"
+  },
+  "209": {
+    "cz_word": "Středa",
+    "ru_word": "Среда",
+    "ru_word_wrong": "Четверг"
+  },
+  "210": {
+    "cz_word": "Сtvrtek",
+    "ru_word": "Четверг",
+    "ru_word_wrong": "Среда"
+  },
+  "211": {
+    "cz_word": "Pátek",
+    "ru_word": "Пятница",
+    "ru_word_wrong": "Понедельник"
+  },
+  "212": {
+    "cz_word": "Sobota",
+    "ru_word": "Суббота",
+    "ru_word_wrong": "Вторник"
+  },
+  "213": {
+    "cz_word": "Neděle",
+    "ru_word": "Воскресенье",
+    "ru_word_wrong": "Бездельник"
+  },
+  "214": {
+    "cz_word": "Den v týdnu",
+    "ru_word": "День недели",
+    "ru_word_wrong": "День Рождения"
+  },
+  "215": {
+    "cz_word": "Leden",
+    "ru_word": "Январь",
+    "ru_word_wrong": "Лед"
+  },
+  "216": {
+    "cz_word": "Únor",
+    "ru_word": "Февраль",
+    "ru_word_wrong": "Вторник"
+  },
+  "217": {
+    "cz_word": "Březen",
+    "ru_word": "Март",
+    "ru_word_wrong": "Бревно"
+  },
+  "218": {
+    "cz_word": "Duben",
+    "ru_word": "Апрель",
+    "ru_word_wrong": "Дуб"
+  },
+  "219": {
+    "cz_word": "Květen",
+    "ru_word": "Май",
+    "ru_word_wrong": "Кухня"
+  },
+  "220": {
+    "cz_word": "Cerven",
+    "ru_word": "Июнь",
+    "ru_word_wrong": "Червь"
+  },
+  "221": {
+    "cz_word": "Cervenec",
+    "ru_word": "Июль",
+    "ru_word_wrong": "Червь"
+  },
+  "222": {
+    "cz_word": "Srpen",
+    "ru_word": "Август",
+    "ru_word_wrong": "Сентябрь"
+  },
+  "223": {
+    "cz_word": "Září",
+    "ru_word": "Сентябрь",
+    "ru_word_wrong": "Заря"
+  },
+  "224": {
+    "cz_word": "Ríjen",
+    "ru_word": "Октябрь",
+    "ru_word_wrong": "Осень"
+  },
+  "225": {
+    "cz_word": "Listopad",
+    "ru_word": "Ноябрь",
+    "ru_word_wrong": "Листопад"
+  },
+  "226": {
+    "cz_word": "Prosinec",
+    "ru_word": "Декабрь",
+    "ru_word_wrong": "Извинения"
+  },
+  "227": {
+    "cz_word": "Narozeniny",
+    "ru_word": "День рождения",
+    "ru_word_wrong": "Новый год"
+  },
+  "228": {
+    "cz_word": "Nový rok",
+    "ru_word": "Новый год",
+    "ru_word_wrong": "День рождения"
+  },
+  "229": {
+    "cz_word": "Svatba",
+    "ru_word": "Свадьба",
+    "ru_word_wrong": "Похороны"
+  },
+  "230": {
+    "cz_word": "Pohřeb",
+    "ru_word": "Похороны",
+    "ru_word_wrong": "Погреб"
   }
 }
