@@ -1148,5 +1148,105 @@
     "cz_word": "Pohřeb",
     "ru_word": "Похороны",
     "ru_word_wrong": "Погреб"
+  },
+  "231": {
+    "cz_word": "Žehlička",
+    "ru_word": "Утюг",
+    "ru_word_wrong": "Заколка"
+  },
+  "232": {
+    "cz_word": "Pytel",
+    "ru_word": "Сумка",
+    "ru_word_wrong": "Пробежка"
+  },
+  "233": {
+    "cz_word": "Fotoaparát",
+    "ru_word": "Камера",
+    "ru_word_wrong": "Фильм"
+  },
+  "234": {
+    "cz_word": "Květ",
+    "ru_word": "Цветок",
+    "ru_word_wrong": "Ваза"
+  },
+  "235": {
+    "cz_word": "Kapesník",
+    "ru_word": "Носовой плоток",
+    "ru_word_wrong": "Кувшин"
+  },
+  "236": {
+    "cz_word": "Hračka",
+    "ru_word": "Игрушка",
+    "ru_word_wrong": "Картина"
+  },
+  "237": {
+    "cz_word": "Obálka",
+    "ru_word": "Конверт",
+    "ru_word_wrong": "Подушка"
+  },
+  "238": {
+    "cz_word": "Noviny",
+    "ru_word": "Газета",
+    "ru_word_wrong": "Журнал"
+  },
+  "239": {
+    "cz_word": "Kartu",
+    "ru_word": "Открытка",
+    "ru_word_wrong": "Письмо"
+  },
+  "240": {
+    "cz_word": "Bankovní karta",
+    "ru_word": "Банковская карта",
+    "ru_word_wrong": "Задолжность"
+  },
+  "241": {
+    "cz_word": "Šachy",
+    "ru_word": "Шахматы",
+    "ru_word_wrong": "Шашки"
+  },
+  "242": {
+    "cz_word": "Elektřina",
+    "ru_word": "Электричество",
+    "ru_word_wrong": "Компьютер"
+  },
+  "243": {
+    "cz_word": "Tlumočník",
+    "ru_word": "Переводчик",
+    "ru_word_wrong": "Проводник"
+  },
+  "244": {
+    "cz_word": "Turista",
+    "ru_word": "Турист",
+    "ru_word_wrong": "Гражданин"
+  },
+  "245": {
+    "cz_word": "Občan",
+    "ru_word": "Гражданин",
+    "ru_word_wrong": "Турист"
+  },
+  "246": {
+    "cz_word": "Kino",
+    "ru_word": "Кинотеатр",
+    "ru_word_wrong": "Фильм"
+  },
+  "247": {
+    "cz_word": "Film",
+    "ru_word": "Фильм",
+    "ru_word_wrong": "Кинотеатр"
+  },
+  "248": {
+    "cz_word": "Změna",
+    "ru_word": "Сдача",
+    "ru_word_wrong": "Измена"
+  },
+  "249": {
+    "cz_word": "Klávesnice",
+    "ru_word": "Клавиатура",
+    "ru_word_wrong": "Ручка"
+  },
+  "250": {
+    "cz_word": "Síť",
+    "ru_word": "Сеть",
+    "ru_word_wrong": "Кресло"
   }
 }
