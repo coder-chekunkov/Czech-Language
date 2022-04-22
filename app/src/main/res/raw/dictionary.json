@@ -1248,5 +1248,180 @@
     "cz_word": "Síť",
     "ru_word": "Сеть",
     "ru_word_wrong": "Кресло"
+  },
+  "251": {
+    "cz_word": "Oblečení",
+    "ru_word": "Одежда",
+    "ru_word_wrong": "Дождь"
+  },
+  "252": {
+    "cz_word": "Boty",
+    "ru_word": "Обувь",
+    "ru_word_wrong": "Шарф"
+  },
+  "253": {
+    "cz_word": "Kabát",
+    "ru_word": "Пальто",
+    "ru_word_wrong": "Костер"
+  },
+  "254": {
+    "cz_word": "Šaty",
+    "ru_word": "Платье",
+    "ru_word_wrong": "Носки"
+  },
+  "255": {
+    "cz_word": "Košile",
+    "ru_word": "Рубашка",
+    "ru_word_wrong": "Волосы"
+  },
+  "256": {
+    "cz_word": "Sukně",
+    "ru_word": "Юбка",
+    "ru_word_wrong": "Платье"
+  },
+  "257": {
+    "cz_word": "Rukavice",
+    "ru_word": "Перчатка",
+    "ru_word_wrong": "Рука"
+  },
+  "258": {
+    "cz_word": "Čepice",
+    "ru_word": "Шапка",
+    "ru_word_wrong": "Рубашка"
+  },
+  "259": {
+    "cz_word": "Bunda",
+    "ru_word": "Куртка",
+    "ru_word_wrong": "Футболка"
+  },
+  "260": {
+    "cz_word": "Šátek",
+    "ru_word": "Шарф",
+    "ru_word_wrong": "Обувь"
+  },
+  "261": {
+    "cz_word": "Ponožka",
+    "ru_word": "Носок",
+    "ru_word_wrong": "Кроссовки"
+  },
+  "262": {
+    "cz_word": "Tričko",
+    "ru_word": "Футболка",
+    "ru_word_wrong": "Штаны"
+  },
+  "263": {
+    "cz_word": "Kravata",
+    "ru_word": "Галстук",
+    "ru_word_wrong": "Кровать"
+  },
+  "264": {
+    "cz_word": "Kalhoty",
+    "ru_word": "Брюки",
+    "ru_word_wrong": "Калготки"
+  },
+  "265": {
+    "cz_word": "Džíny",
+    "ru_word": "Джинсы",
+    "ru_word_wrong": "Брюки"
+  },
+  "266": {
+    "cz_word": "Starý",
+    "ru_word": "Старый",
+    "ru_word_wrong": "Молодой"
+  },
+  "267": {
+    "cz_word": "Mladý",
+    "ru_word": "Молодой",
+    "ru_word_wrong": "Старый"
+  },
+  "268": {
+    "cz_word": "Černá",
+    "ru_word": "Черный цвет",
+    "ru_word_wrong": "Синий цвет"
+  },
+  "269": {
+    "cz_word": "Modrý",
+    "ru_word": "Голубой цвет",
+    "ru_word_wrong": "Красный цвет"
+  },
+  "270": {
+    "cz_word": "Červené",
+    "ru_word": "Красный цвет",
+    "ru_word_wrong": "Красивый"
+  },
+  "271": {
+    "cz_word": "Krásná",
+    "ru_word": "Красивый",
+    "ru_word_wrong": "Красный цвет"
+  },
+  "272": {
+    "cz_word": "Píseň",
+    "ru_word": "Песня",
+    "ru_word_wrong": "Музыка"
+  },
+  "273": {
+    "cz_word": "Hudba",
+    "ru_word": "Музыка",
+    "ru_word_wrong": "Песня"
+  },
+  "274": {
+    "cz_word": "Štěstí",
+    "ru_word": "Счастье",
+    "ru_word_wrong": "Неудача"
+  },
+  "275": {
+    "cz_word": "Překvapení",
+    "ru_word": "Сюрприз",
+    "ru_word_wrong": "Пекарня"
+  },
+  "276": {
+    "cz_word": "Večírek",
+    "ru_word": "Вечеринка",
+    "ru_word_wrong": "Вечер"
+  },
+  "277": {
+    "cz_word": "Déšť",
+    "ru_word": "Дождь",
+    "ru_word_wrong": "Снег"
+  },
+  "278": {
+    "cz_word": "Vítr",
+    "ru_word": "Ветер",
+    "ru_word_wrong": "Дождь"
+  },
+  "279": {
+    "cz_word": "Žert",
+    "ru_word": "Шутка",
+    "ru_word_wrong": "Жизнь"
+  },
+  "280": {
+    "cz_word": "Život",
+    "ru_word": "Жизнь",
+    "ru_word_wrong": "Живот"
+  },
+  "281": {
+    "cz_word": "Žaludek",
+    "ru_word": "Живот",
+    "ru_word_wrong": "Желудок"
+  },
+  "282": {
+    "cz_word": "Zkouška",
+    "ru_word": "Экзамен",
+    "ru_word_wrong": "Заговор"
+  },
+  "283": {
+    "cz_word": "Přátelství",
+    "ru_word": "Дружба",
+    "ru_word_wrong": "Вражда"
+  },
+  "284": {
+    "cz_word": "Prkno",
+    "ru_word": "Доска",
+    "ru_word_wrong": "Нож"
+  },
+  "285": {
+    "cz_word": "Odpadkový koš",
+    "ru_word": "Мусорка",
+    "ru_word_wrong": "Ведро"
   }
 }

@@ -4,9 +4,11 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.RequiresApi;
 import com.example.czech_language.R;
 
 public class Information implements View.OnClickListener {
@@ -39,5 +41,10 @@ public class Information implements View.OnClickListener {
     public void onClick(View v) {
         if (v.getId() == R.id.close_alert_dialog_information)
             alertDialogInformation.dismiss();
+    }
+
+    // Метод установки текста с оставшимся временем до получения игр:
+    public void setTextWithTime(String lastTime) {
+        textWithTime.setText(lastTime);
     }
 }

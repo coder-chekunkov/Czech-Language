@@ -40,6 +40,15 @@ public class StatisticCreator extends MenuActivity {
         editor.apply();
     }
 
+    // Получение ежедневных игр:
+    public void getNewEverydayGames(Context context) {
+        SharedPreferences mStatistic = context.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = mStatistic.edit();
+
+        editor.putInt("last_games", 80);
+        editor.apply();
+    }
+
     // Сброс статистики пользователя:
     public void restartStatistic(Context context) {
         SharedPreferences mStatistic = context.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
@@ -52,7 +61,7 @@ public class StatisticCreator extends MenuActivity {
     }
 
     // Получение дополнительных 10 игр:
-    public static void addRewardGames(Context context, ProgressBarWorker progressBarWorker){
+    public static void addRewardGames(Context context, ProgressBarWorker progressBarWorker) {
         SharedPreferences mStatistic = context.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = mStatistic.edit();
 

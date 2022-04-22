@@ -2,7 +2,10 @@ package com.example.czech_language;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,10 +13,18 @@ import com.example.czech_language.game_worker.GameCreator;
 import com.example.czech_language.static_worker.CardChanger;
 import com.example.czech_language.static_worker.ProgressBarWorker;
 import com.example.czech_language.static_worker.StartAnimation;
+import com.example.czech_language.static_worker.TimeWorker;
 import com.example.czech_language.statistic_worker.StatisticCreator;
 import com.example.czech_language.tabs_worker.*;
 
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
+
+    // Переменные для работы с таймером:
+    public static final String APP_PREFERENCES = "time";
+    private CountDownTimer mCountDownTimer;
+    private static long mTimeLeftInMillis = 86400;
+    private boolean mTimerRunning;
+    private long mEndTime;
 
     ImageButton buttonStatistic, buttonSettings, buttonShop, buttonInformation, buttonPlay,
             buttonCardViewDescription, buttonCardViewGame, buttonAnswerYes, buttonAnswerNo,
@@ -29,6 +40,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     GameOver gameOverWorker;
     GameCreator gameCreator;
     ProgressBarWorker progressBarWorker;
+    StatisticCreator statisticCreator;
 
     View firstLine, secondLine, thirdLine;
 
@@ -125,8 +137,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         alertDialogGameOver = new Dialog(this);
         gameOverWorker = new GameOver(alertDialogGameOver);
 
+        statisticCreator = new StatisticCreator();
+
         gameCreator = new GameCreator(this, czWord, ruWord, buttonAnswerYes, buttonAnswerNo,
                 firstSmile, secondSmile, progressBarWorker, gameOverWorker, cardChanger);
+
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -169,5 +184,69 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         return lastGames != 0;
     }
 
+    // Запуск работы таймера с отсчетом времени для получения новых игр:
+    public void startTimer(Context context) {
+        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                String lastTime = TimeWorker.createStringWithTime(millisUntilFinished);
+                informationWorker.setTextWithTime(lastTime);
+                shopWorker.setTextWithTime(lastTime);
+                gameOverWorker.setTextWithTime(lastTime);
+            }
 
+            @Override
+            public void onFinish() {
+                mTimerRunning = false;
+
+                statisticCreator.getNewEverydayGames(context);
+                progressBarWorker.setProgress();
+
+                mTimeLeftInMillis = 86400000;
+                startTimer(context);
+            }
+
+        }.start();
+        mTimerRunning = true;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        SharedPreferences prefs = getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        editor.putLong("millisLeft", mTimeLeftInMillis);
+        editor.putBoolean("timerRunning", mTimerRunning);
+        editor.putLong("endTime", mEndTime);
+        editor.apply();
+
+        if (mCountDownTimer != null) {
+            mCountDownTimer.cancel();
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        SharedPreferences prefs = getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE);
+        mTimeLeftInMillis = prefs.getLong("millisLeft", 86400000);
+        mTimerRunning = prefs.getBoolean("timerRunning", false);
+        if (mTimerRunning) {
+            mEndTime = prefs.getLong("endTime", 0);
+            mTimeLeftInMillis = mEndTime - System.currentTimeMillis();
+            if (mTimeLeftInMillis < 0) {
+                mTimeLeftInMillis = 0;
+                mTimerRunning = false;
+
+            } else {
+                startTimer(this);
+            }
+        } else {
+            startTimer(this);
+        }
+
+    }
 }

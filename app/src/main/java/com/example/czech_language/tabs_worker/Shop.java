@@ -9,6 +9,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.example.czech_language.R;
 import com.example.czech_language.static_worker.ProgressBarWorker;
@@ -18,6 +19,7 @@ public class Shop implements View.OnClickListener {
 
     Dialog alertDialogShop;
     ImageView buttonCloseShop, buttonGetReward;
+    TextView textWithTime;
     Context context;
     ProgressBarWorker progressBarWorker;
 
@@ -32,6 +34,9 @@ public class Shop implements View.OnClickListener {
         // Регистрация кнопки "Награждение":
         buttonGetReward = alertDialogShop.findViewById(R.id.button_shop_reward);
         buttonGetReward.setOnClickListener(this);
+
+        // Регистрация строки с оставшимся временем до получения игр:
+        textWithTime = alertDialogShop.findViewById(R.id.shop_text_timer);
 
         this.progressBarWorker = progressBarWorker;
         this.context = context;
@@ -62,8 +67,7 @@ public class Shop implements View.OnClickListener {
             Toast toastNoInternet = Toast.makeText(context.getApplicationContext(), "Получено 10 дополнительных игр!", Toast.LENGTH_SHORT);
             toastNoInternet.show();
             StatisticCreator.addRewardGames(context, progressBarWorker);
-        }
-        else {
+        } else {
             Toast toastNoInternet = Toast.makeText(context.getApplicationContext(), "Проверьте подключение к интернету!", Toast.LENGTH_SHORT);
             toastNoInternet.show();
         }
@@ -81,5 +85,10 @@ public class Shop implements View.OnClickListener {
             }
 
         return false;
+    }
+
+    // Метод установки текста с оставшимся временем до получения игр:
+    public void setTextWithTime(String lastTime) {
+        textWithTime.setText(lastTime);
     }
 }

@@ -1,42 +1,33 @@
 package com.example.czech_language.static_worker;
 
-import java.util.Calendar;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.CountDownTimer;
+import com.example.czech_language.MenuActivity;
 
-public class TimeWorker implements Runnable{
+import java.util.Locale;
 
-    long hours, minutes, seconds;
+public class TimeWorker extends MenuActivity {
 
-    @Override
-    public void run() {
-        while (true){
-            try {
-                Thread.sleep(1000);
-                Calendar c = Calendar.getInstance();
-                hours = 24 - c.get(Calendar.HOUR_OF_DAY);
-                minutes = 60 - c.get(Calendar.MINUTE);
-                seconds = 60 - c.get(Calendar.SECOND);
-                System.out.println(createTimeString());
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+
+    // Создание строки со временем:
+    public static String createStringWithTime(long lastTime) {
+        int hours = (int) (lastTime / 3600000);
+        int minutes = (int) lastTime / 60000 % 60;
+        int seconds = (int) lastTime / 1000 % 60;
+
+        return String.format(Locale.getDefault(), "%02d:%02d:%02d", hours, minutes, seconds);
+    }
+
+    // Метод записи переменных для работы с таймером в файл:
+    public static void setTimerPreferences(Context context, long mTimeLeftInMillis,
+                                           boolean mTimerRunning, long mEndTime,
+                                           CountDownTimer mCountDownTimer) {
 
     }
 
-    // Создание строки с оставшимся временем до получения новых игр:
-    public String createTimeString(){
-        String timeString = "";
+    public static void getTimerPreferences(Context context){
 
-        if (hours < 10) timeString += "0" + hours + ":";
-        else timeString += hours + ":";
-
-        if (minutes < 10) timeString += "0" + minutes + ":";
-        else timeString += minutes + ":";
-
-        if (seconds < 10) timeString += "0";
-        else timeString += seconds;
-
-        return timeString;
     }
 
 
