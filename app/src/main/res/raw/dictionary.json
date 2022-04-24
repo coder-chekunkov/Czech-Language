@@ -1423,5 +1423,80 @@
     "cz_word": "Odpadkový koš",
     "ru_word": "Мусорка",
     "ru_word_wrong": "Ведро"
+  },
+  "286": {
+    "cz_word": "Programátor",
+    "ru_word": "Программист",
+    "ru_word_wrong": "Калькулятор"
+  },
+  "287": {
+    "cz_word": "Kalkulačka",
+    "ru_word": "Калькулятор",
+    "ru_word_wrong": "Бумага"
+  },
+  "288": {
+    "cz_word": "Velvyslanectví",
+    "ru_word": "Посольство",
+    "ru_word_wrong": "Туристическое агенство"
+  },
+  "289": {
+    "cz_word": "Batoh",
+    "ru_word": "Рюкзак",
+    "ru_word_wrong": "Батон"
+  },
+  "290": {
+    "cz_word": "Nepochopit",
+    "ru_word": "Непонимать (человека)",
+    "ru_word_wrong": "Не уметь говорить"
+  },
+  "291": {
+    "cz_word": "Děkuji",
+    "ru_word": "Спасибо",
+    "ru_word_wrong": "Дерево"
+  },
+  "292": {
+    "cz_word": "Prohrát",
+    "ru_word": "Потерять",
+    "ru_word_wrong": "Найти"
+  },
+  "293": {
+    "cz_word": "Najít",
+    "ru_word": "Найти",
+    "ru_word_wrong": "Потерять"
+  },
+  "294": {
+    "cz_word": "Nákup",
+    "ru_word": "Покупка",
+    "ru_word_wrong": "Продажа"
+  },
+  "295": {
+    "cz_word": "Prodej",
+    "ru_word": "Продажа",
+    "ru_word_wrong": "Покупка"
+  },
+  "296": {
+    "cz_word": "Hotelový pokoj",
+    "ru_word": "Номер в гостинице",
+    "ru_word_wrong": "Встреча друзей"
+  },
+  "297": {
+    "cz_word": "Šušenka",
+    "ru_word": "Печенье",
+    "ru_word_wrong": "Леденец"
+  },
+  "298": {
+    "cz_word": "Trdelník",
+    "ru_word": "Трдельник",
+    "ru_word_wrong": "Пакет"
+  },
+  "299": {
+    "cz_word": "Balík",
+    "ru_word": "Пакет",
+    "ru_word_wrong": "Шар"
+  },
+  "300": {
+    "cz_word": "Alkohol",
+    "ru_word": "Алкоголь",
+    "ru_word_wrong": "Зеркало"
   }
 }
