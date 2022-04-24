@@ -20,9 +20,9 @@ import com.example.czech_language.tabs_worker.*;
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     // Переменные для работы с таймером:
+    CountDownTimer mCountDownTimer;
     public static final String APP_PREFERENCES = "time";
-    private CountDownTimer mCountDownTimer;
-    private static long mTimeLeftInMillis = 86400;
+    private static long mTimeLeftInMillis = 86400000;
     private boolean mTimerRunning;
     private long mEndTime;
 
@@ -186,9 +186,13 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
     // Запуск работы таймера с отсчетом времени для получения новых игр:
     public void startTimer(Context context) {
+        mEndTime = System.currentTimeMillis() + mTimeLeftInMillis;
+        mTimerRunning = true;
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                mTimeLeftInMillis = millisUntilFinished;
+
                 String lastTime = TimeWorker.createStringWithTime(millisUntilFinished);
                 informationWorker.setTextWithTime(lastTime);
                 shopWorker.setTextWithTime(lastTime);
@@ -197,8 +201,6 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onFinish() {
-                mTimerRunning = false;
-
                 statisticCreator.getNewEverydayGames(context);
                 progressBarWorker.setProgress();
 
@@ -207,7 +209,6 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         }.start();
-        mTimerRunning = true;
     }
 
     @Override
@@ -217,14 +218,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         SharedPreferences prefs = getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
 
-        editor.putLong("millisLeft", mTimeLeftInMillis);
         editor.putBoolean("timerRunning", mTimerRunning);
+        editor.putLong("millisLeft", mTimeLeftInMillis);
         editor.putLong("endTime", mEndTime);
         editor.apply();
 
-        if (mCountDownTimer != null) {
-            mCountDownTimer.cancel();
-        }
     }
 
     @Override
@@ -232,21 +230,24 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         super.onStart();
 
         SharedPreferences prefs = getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE);
+
         mTimeLeftInMillis = prefs.getLong("millisLeft", 86400000);
         mTimerRunning = prefs.getBoolean("timerRunning", false);
-        if (mTimerRunning) {
-            mEndTime = prefs.getLong("endTime", 0);
-            mTimeLeftInMillis = mEndTime - System.currentTimeMillis();
-            if (mTimeLeftInMillis < 0) {
-                mTimeLeftInMillis = 0;
-                mTimerRunning = false;
+        mEndTime = prefs.getLong("endTime", 0);
 
-            } else {
-                startTimer(this);
+        if (mTimerRunning) {
+            mTimeLeftInMillis = mEndTime - System.currentTimeMillis();
+
+            if (mTimeLeftInMillis < 0) {
+                statisticCreator.getNewEverydayGames(this);
+                progressBarWorker.setProgress();
+
+                mTimeLeftInMillis = 86400000;
             }
-        } else {
-            startTimer(this);
         }
+
+        startTimer(this);
+
 
     }
 }
