@@ -1498,5 +1498,80 @@
     "cz_word": "Alkohol",
     "ru_word": "Алкоголь",
     "ru_word_wrong": "Зеркало"
+  },
+  "301": {
+    "cz_word": "Knoflík",
+    "ru_word": "Кнопка",
+    "ru_word_wrong": "Кефир"
+  },
+  "302": {
+    "cz_word": "Náramkové hodinky",
+    "ru_word": "Наручные часы",
+    "ru_word_wrong": "Настенные часы"
+  },
+  "303": {
+    "cz_word": "Hněv",
+    "ru_word": "Злость",
+    "ru_word_wrong": "Доброта"
+  },
+  "304": {
+    "cz_word": "Laskavost",
+    "ru_word": "Доброта",
+    "ru_word_wrong": "Злость"
+  },
+  "305": {
+    "cz_word": "Dokument",
+    "ru_word": "Документ",
+    "ru_word_wrong": "Тетрадь"
+  },
+  "306": {
+    "cz_word": "Brýle",
+    "ru_word": "Очки",
+    "ru_word_wrong": "Брелок"
+  },
+  "307": {
+    "cz_word": "Lekarna",
+    "ru_word": "Аптека",
+    "ru_word_wrong": "Больница"
+  },
+  "308": {
+    "cz_word": "Sluchátka",
+    "ru_word": "Наушники",
+    "ru_word_wrong": "Машина"
+  },
+  "309": {
+    "cz_word": "Obrázek",
+    "ru_word": "Картинка",
+    "ru_word_wrong": "Образ"
+  },
+  "310": {
+    "cz_word": "Stánek",
+    "ru_word": "Киосок",
+    "ru_word_wrong": "Станция метро"
+  },
+  "311": {
+    "cz_word": "Šipka",
+    "ru_word": "Стрелка",
+    "ru_word_wrong": "Человек"
+  },
+  "312": {
+    "cz_word": "Školák",
+    "ru_word": "Школьник",
+    "ru_word_wrong": "Учитель"
+  },
+  "313": {
+    "cz_word": "Zámek",
+    "ru_word": "Замок (на двери)",
+    "ru_word_wrong": "Замок (постройка)"
+  },
+  "314": {
+    "cz_word": "Armáda",
+    "ru_word": "Армия",
+    "ru_word_wrong": "Танк"
+  },
+  "315": {
+    "cz_word": "Světlo",
+    "ru_word": "Свет",
+    "ru_word_wrong": "Темень"
   }
 }

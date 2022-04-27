@@ -7,6 +7,7 @@ android {
     buildToolsVersion "31.0.0"
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.example.czech_language"
         minSdkVersion 16
         targetSdkVersion 31
@@ -34,6 +35,7 @@ dependencies {
         exclude group: 'org.hamcrest', module: 'hamcrest-core'
     }
 
+    implementation 'com.google.android.gms:play-services-ads:20.6.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'

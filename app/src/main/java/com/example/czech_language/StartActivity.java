@@ -14,10 +14,6 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-//        TimeWorker timeWorker = new TimeWorker();
-//        Thread time = new Thread(timeWorker);
-//        time.start();
-
         new Handler().postDelayed(() -> {
             Intent go_to_home = new Intent(StartActivity.this, MenuActivity.class);
             startActivity(go_to_home);
