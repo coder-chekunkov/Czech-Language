@@ -30,6 +30,9 @@
    <b> 🖼️ Галерея и ссылка на скачивания приложения "Czech Language" </b>  
 </p>
 
+ 🔗 Для скачивания приложения **перейдите** по [ссылке](https://play.google.com/store/apps/details?id=acproject_czechlanguage.czech_language) в Google Play Market.
+ 
+ 
 <p align="center">
  <img alt="GIF" src="https://github.com/coder-chekunkov/czech-language/blob/main/wiki_images/czech-language-001.jpeg" width="250"/>
  <img alt="GIF" src="https://github.com/coder-chekunkov/czech-language/blob/main/wiki_images/czech-language-002.jpeg" width="250"/>
@@ -38,12 +41,6 @@
  <img alt="GIF" src="https://github.com/coder-chekunkov/czech-language/blob/main/wiki_images/czech-language-005.jpeg" width="250"/>
  <img alt="GIF" src="https://github.com/coder-chekunkov/czech-language/blob/main/wiki_images/czech-language-006.jpeg" width="250"/>
 </p>
- 
-
- 
- 🔗 Для скачивания приложения **перейдите** по [ссылке](https://play.google.com/store/apps/details?id=acproject_czechlanguage.czech_language) в Google Play Market.
- 
- 
  
 ---
 
