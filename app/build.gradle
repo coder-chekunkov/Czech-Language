@@ -31,7 +31,7 @@ android {
 
 dependencies {
 
-    compile('com.googlecode.json-simple:json-simple:1.1.1') {
+    implementation('com.googlecode.json-simple:json-simple:1.1.1') {
         exclude group: 'org.hamcrest', module: 'hamcrest-core'
     }
 
