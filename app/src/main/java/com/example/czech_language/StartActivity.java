@@ -2,8 +2,6 @@ package com.example.czech_language;
 
 import android.content.Intent;
 import android.os.Handler;
-import android.view.View;
-import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
